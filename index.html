@@ -530,6 +530,42 @@
         padding-bottom: 0.5rem;
       }
 
+      .intro-section {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: var(--paper);
+      }
+
+      .intro-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background: url("assets/office-exterior-dusk.jpg") center 58% / cover no-repeat;
+        filter: saturate(0.84) contrast(0.94);
+        transform: scale(1.015);
+      }
+
+      .intro-section::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(
+          90deg,
+          rgba(246, 243, 236, 0.88) 0%,
+          rgba(246, 243, 236, 0.82) 42%,
+          rgba(246, 243, 236, 0.69) 72%,
+          rgba(246, 243, 236, 0.58) 100%
+        );
+      }
+
+      .intro-section .intro-grid {
+        position: relative;
+        z-index: 1;
+      }
+
       .intro-copy p {
         margin: 0;
         color: var(--ink-soft);
@@ -1396,6 +1432,180 @@
         font-weight: 500;
       }
 
+      .location-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .location-gallery-toggle {
+        border-color: rgba(255, 255, 255, 0.42);
+        color: var(--white);
+        background: transparent;
+      }
+
+      .location-gallery-toggle:hover {
+        border-color: var(--white);
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .location-gallery-toggle span[aria-hidden="true"] {
+        font-size: 1.15rem;
+        font-weight: 400;
+        transition: transform 0.25s ease;
+      }
+
+      .location-gallery-toggle[aria-expanded="true"] span[aria-hidden="true"] {
+        transform: rotate(45deg);
+      }
+
+      .office-gallery {
+        display: grid;
+        grid-template-columns: minmax(17rem, 0.52fr) minmax(0, 1fr);
+        margin-top: clamp(3rem, 7vw, 6rem);
+        overflow: hidden;
+        scroll-margin-top: 7rem;
+        border: 1px solid var(--line);
+        background: var(--paper-deep);
+        box-shadow: 0 30px 80px rgba(26, 34, 31, 0.12);
+      }
+
+      .office-gallery[hidden] {
+        display: none;
+      }
+
+      .office-gallery-intro {
+        display: flex;
+        flex-direction: column;
+        padding: clamp(2rem, 4vw, 3.5rem);
+      }
+
+      .office-gallery-intro h3 {
+        max-width: 12ch;
+        margin: 0;
+        font-size: clamp(2rem, 3.5vw, 3.35rem);
+        font-weight: 300;
+        letter-spacing: -0.04em;
+        line-height: 1.04;
+      }
+
+      .office-gallery-intro > p:not(.section-label) {
+        margin: 1.3rem 0 0;
+        color: var(--ink-soft);
+        line-height: 1.75;
+      }
+
+      .office-gallery-note {
+        padding-top: 1.2rem;
+        border-top: 1px solid var(--line);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .office-gallery-controls {
+        display: grid;
+        gap: 1.3rem;
+        margin-top: auto;
+        padding-top: 3rem;
+      }
+
+      .office-gallery-buttons {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+      }
+
+      .office-gallery-arrow {
+        width: 3.1rem;
+        height: 3.1rem;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(34, 36, 32, 0.28);
+        border-radius: 50%;
+        color: var(--ink);
+        background: transparent;
+        font-size: 1.2rem;
+        transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .office-gallery-arrow:hover {
+        border-color: var(--bronze-dark);
+        color: var(--white);
+        background: var(--bronze-dark);
+        transform: translateY(-2px);
+      }
+
+      .office-gallery-position {
+        margin-left: auto;
+        color: var(--bronze-dark);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+      }
+
+      .office-gallery-dots {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.55rem;
+      }
+
+      .office-gallery-dot {
+        width: 0.55rem;
+        height: 0.55rem;
+        border: 0;
+        border-radius: 999px;
+        padding: 0;
+        background: rgba(34, 36, 32, 0.22);
+        transition: width 0.25s ease, background 0.25s ease;
+      }
+
+      .office-gallery-dot[aria-current="true"] {
+        width: 2rem;
+        background: var(--bronze-dark);
+      }
+
+      .office-gallery-stage {
+        min-width: 0;
+        background:
+          radial-gradient(circle at 85% 15%, rgba(179, 126, 80, 0.16), transparent 30%),
+          var(--forest);
+      }
+
+      .office-slide {
+        position: relative;
+        min-height: 100%;
+        display: grid;
+        place-items: center;
+        aspect-ratio: 4 / 3;
+        margin: 0;
+      }
+
+      .office-slide[hidden] {
+        display: none;
+      }
+
+      .office-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .office-slide figcaption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 3.5rem 1.5rem 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        background: linear-gradient(180deg, transparent, rgba(16, 27, 24, 0.82));
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
       .contact-section {
         color: var(--white);
         background: #9c6437;
@@ -1877,6 +2087,18 @@
           width: min(100%, 38rem);
         }
 
+        .office-gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .office-gallery-stage {
+          grid-row: 1;
+        }
+
+        .office-gallery-intro {
+          grid-row: 2;
+        }
+
         .footer-main {
           grid-template-columns: 1fr 1fr;
         }
@@ -1953,6 +2175,14 @@
         .contact-heading h2,
         .faq-heading h2 {
           font-size: clamp(2.45rem, 12vw, 3.4rem);
+        }
+
+        .intro-section::before {
+          background-position: 42% center;
+        }
+
+        .intro-section::after {
+          background: rgba(246, 243, 236, 0.78);
         }
 
         .service-item {
@@ -2054,6 +2284,35 @@
 
         .emergency-card > div {
           width: 100%;
+        }
+
+        .location-actions {
+          display: grid;
+        }
+
+        .location-actions .button {
+          width: 100%;
+        }
+
+        .office-gallery {
+          margin-top: 3rem;
+        }
+
+        .office-gallery-intro {
+          padding: 1.8rem 1.6rem;
+        }
+
+        .office-gallery-intro h3 {
+          font-size: clamp(2.2rem, 11vw, 3rem);
+        }
+
+        .office-gallery-controls {
+          padding-top: 2.2rem;
+        }
+
+        .office-slide figcaption {
+          padding-inline: 1rem;
+          font-size: 0.65rem;
         }
 
         .review-item {
@@ -2281,7 +2540,7 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="intro-title">
+      <section class="section intro-section" aria-labelledby="intro-title">
         <div class="container intro-grid">
           <div>
             <p class="section-label">A more considered dental experience</p>
@@ -2593,14 +2852,153 @@
               <div class="hours-row" role="row"><strong role="rowheader">Friday</strong><span role="cell">8:00 am–1:00 pm</span></div>
               <div class="hours-row" role="row"><strong role="rowheader">Saturday–Sunday</strong><span role="cell">By appointment</span></div>
             </div>
-            <a
-              class="button button-light button-arrow"
-              href="https://www.google.com/maps/search/?api=1&amp;query=455+Church+Street+Fayetteville+GA+30214"
-              target="_blank"
-              rel="noreferrer"
-            >Get directions</a>
+            <div class="location-actions">
+              <a
+                class="button button-light button-arrow"
+                href="https://www.google.com/maps/search/?api=1&amp;query=455+Church+Street+Fayetteville+GA+30214"
+                target="_blank"
+                rel="noreferrer"
+              >Get directions</a>
+              <button
+                class="button location-gallery-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="office-gallery"
+              >
+                <span class="location-gallery-toggle-label">View office photos</span>
+                <span aria-hidden="true">+</span>
+              </button>
+            </div>
           </aside>
         </div>
+
+        <section
+          class="office-gallery"
+          id="office-gallery"
+          aria-labelledby="office-gallery-title"
+          hidden
+        >
+          <div class="office-gallery-intro">
+            <p class="section-label">Inside Artistic</p>
+            <h3 id="office-gallery-title">A space designed to feel calm before care begins.</h3>
+            <p>
+              Explore the exterior, lobby, and thoughtful details that make our Fayetteville office feel welcoming.
+            </p>
+            <p class="office-gallery-note">Real photos from our Church Street practice</p>
+            <div class="office-gallery-controls" aria-label="Office gallery controls">
+              <div class="office-gallery-buttons">
+                <button class="office-gallery-arrow office-gallery-previous" type="button" aria-label="Previous office photo">←</button>
+                <button class="office-gallery-arrow office-gallery-next" type="button" aria-label="Next office photo">→</button>
+                <span class="office-gallery-position" aria-live="polite">1 / 8</span>
+              </div>
+              <div class="office-gallery-dots" aria-label="Choose an office photo">
+                <button class="office-gallery-dot" type="button" data-office-slide-index="0" aria-label="View photo 1: Exterior at sunset" aria-current="true"></button>
+                <button class="office-gallery-dot" type="button" data-office-slide-index="1" aria-label="View photo 2: Main entrance" aria-current="false"></button>
+                <button class="office-gallery-dot" type="button" data-office-slide-index="2" aria-label="View photo 3: Church Street exterior" aria-current="false"></button>
+                <button class="office-gallery-dot" type="button" data-office-slide-index="3" aria-label="View photo 4: Waiting room seating" aria-current="false"></button>
+                <button class="office-gallery-dot" type="button" data-office-slide-index="4" aria-label="View photo 5: Lobby entrance" aria-current="false"></button>
+                <button class="office-gallery-dot" type="button" data-office-slide-index="5" aria-label="View photo 6: Waiting room lounge" aria-current="false"></button>
+                <button class="office-gallery-dot" type="button" data-office-slide-index="6" aria-label="View photo 7: Prayer wall details" aria-current="false"></button>
+                <button class="office-gallery-dot" type="button" data-office-slide-index="7" aria-label="View photo 8: Faith-centered details" aria-current="false"></button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="office-gallery-stage"
+            tabindex="0"
+            aria-label="Office photo gallery. Use the left and right arrow keys to change photos."
+          >
+            <figure class="office-slide" data-office-slide>
+              <img
+                src="assets/office-exterior-dusk.jpg"
+                width="680"
+                height="510"
+                alt="Artistic General Dentistry illuminated beneath a pink sunset sky."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>Exterior at sunset</figcaption>
+            </figure>
+            <figure class="office-slide" data-office-slide hidden>
+              <img
+                src="assets/office-exterior-front.jpg"
+                width="680"
+                height="510"
+                alt="The modern front entrance and Artistic General Dentistry building sign."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>Main entrance</figcaption>
+            </figure>
+            <figure class="office-slide" data-office-slide hidden>
+              <img
+                src="assets/office-exterior-side.jpg"
+                width="680"
+                height="510"
+                alt="A side view of the modern dental practice with accessible sidewalk entry."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>Church Street exterior</figcaption>
+            </figure>
+            <figure class="office-slide" data-office-slide hidden>
+              <img
+                src="assets/office-lobby-seating.jpg"
+                width="382"
+                height="510"
+                alt="The bright waiting room with leather seating, large windows, and a sculptural chandelier."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>Waiting room seating</figcaption>
+            </figure>
+            <figure class="office-slide" data-office-slide hidden>
+              <img
+                src="assets/office-lobby-entry.jpg"
+                width="382"
+                height="510"
+                alt="The clean, bright practice lobby and entrance with a refreshment station."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>Lobby entrance</figcaption>
+            </figure>
+            <figure class="office-slide" data-office-slide hidden>
+              <img
+                src="assets/office-lobby-window.jpg"
+                width="382"
+                height="510"
+                alt="The waiting room lounge framed by floor-to-ceiling windows and warm leather seating."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>Waiting room lounge</figcaption>
+            </figure>
+            <figure class="office-slide" data-office-slide hidden>
+              <img
+                src="assets/office-prayer-details.jpg"
+                width="382"
+                height="510"
+                alt="A Prayers of Hope container beside handwritten requests on the office prayer wall."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>Prayer wall details</figcaption>
+            </figure>
+            <figure class="office-slide" data-office-slide hidden>
+              <img
+                src="assets/office-faith-bracelets.jpg"
+                width="510"
+                height="510"
+                alt="God Can't Fail bracelets displayed inside the practice."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>Faith-centered details</figcaption>
+            </figure>
+          </div>
+        </section>
       </section>
 
       <section class="section contact-section" id="appointment" aria-labelledby="appointment-title">
@@ -2766,6 +3164,76 @@
 
       navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      const officeGalleryToggle = document.querySelector(".location-gallery-toggle");
+      const officeGalleryToggleLabel = document.querySelector(".location-gallery-toggle-label");
+      const officeGallery = document.getElementById("office-gallery");
+      const officeGalleryStage = document.querySelector(".office-gallery-stage");
+      const officeSlides = Array.from(document.querySelectorAll("[data-office-slide]"));
+      const officeGalleryDots = Array.from(document.querySelectorAll("[data-office-slide-index]"));
+      const officeGalleryPrevious = document.querySelector(".office-gallery-previous");
+      const officeGalleryNext = document.querySelector(".office-gallery-next");
+      const officeGalleryPosition = document.querySelector(".office-gallery-position");
+      let currentOfficeSlide = 0;
+      let officeTouchStartX = 0;
+
+      function showOfficeSlide(index) {
+        currentOfficeSlide = (index + officeSlides.length) % officeSlides.length;
+
+        officeSlides.forEach((slide, slideIndex) => {
+          slide.hidden = slideIndex !== currentOfficeSlide;
+        });
+
+        officeGalleryDots.forEach((dot, dotIndex) => {
+          dot.setAttribute("aria-current", String(dotIndex === currentOfficeSlide));
+        });
+
+        officeGalleryPosition.textContent = `${currentOfficeSlide + 1} / ${officeSlides.length}`;
+      }
+
+      officeGalleryToggle.addEventListener("click", () => {
+        const willOpen = officeGallery.hidden;
+        officeGallery.hidden = !willOpen;
+        officeGalleryToggle.setAttribute("aria-expanded", String(willOpen));
+        officeGalleryToggleLabel.textContent = willOpen ? "Close office photos" : "View office photos";
+
+        if (willOpen) {
+          const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          requestAnimationFrame(() => {
+            officeGallery.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+          });
+        }
+      });
+
+      officeGalleryPrevious.addEventListener("click", () => showOfficeSlide(currentOfficeSlide - 1));
+      officeGalleryNext.addEventListener("click", () => showOfficeSlide(currentOfficeSlide + 1));
+
+      officeGalleryDots.forEach((dot) => {
+        dot.addEventListener("click", () => showOfficeSlide(Number(dot.dataset.officeSlideIndex)));
+      });
+
+      officeGalleryStage.addEventListener("keydown", (event) => {
+        if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          showOfficeSlide(currentOfficeSlide - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          showOfficeSlide(currentOfficeSlide + 1);
+        }
+      });
+
+      officeGalleryStage.addEventListener("touchstart", (event) => {
+        officeTouchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      officeGalleryStage.addEventListener("touchend", (event) => {
+        const swipeDistance = event.changedTouches[0].clientX - officeTouchStartX;
+
+        if (Math.abs(swipeDistance) < 50) return;
+        showOfficeSlide(currentOfficeSlide + (swipeDistance < 0 ? 1 : -1));
+      }, { passive: true });
     </script>
   </body>
 </html>
