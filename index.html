@@ -532,6 +532,9 @@
 
       .intro-section {
         position: relative;
+        min-height: clamp(38rem, 50vw, 42rem);
+        display: flex;
+        align-items: center;
         isolation: isolate;
         overflow: hidden;
         background: var(--paper);
@@ -542,9 +545,8 @@
         position: absolute;
         inset: 0;
         z-index: -2;
-        background: url("assets/office-exterior-dusk.jpg") center 58% / cover no-repeat;
+        background: url("assets/office-exterior-dusk.jpg") center bottom / cover no-repeat;
         filter: saturate(0.84) contrast(0.94);
-        transform: scale(1.015);
       }
 
       .intro-section::after {
@@ -564,6 +566,23 @@
       .intro-section .intro-grid {
         position: relative;
         z-index: 1;
+      }
+
+      .intro-section .display-heading {
+        font-weight: 400;
+        text-shadow: 0 1px 24px rgba(246, 243, 236, 0.78);
+      }
+
+      .intro-section .intro-copy p {
+        color: #41443f;
+        font-weight: 500;
+        text-shadow: 0 1px 18px rgba(246, 243, 236, 0.82);
+      }
+
+      .intro-section .section-label,
+      .intro-section .signature {
+        color: #794726;
+        text-shadow: 0 1px 16px rgba(246, 243, 236, 0.78);
       }
 
       .intro-copy p {
@@ -1464,21 +1483,6 @@
         line-height: 1.04;
       }
 
-      .office-gallery-intro > p:not(.section-label) {
-        margin: 1.3rem 0 0;
-        color: var(--ink-soft);
-        line-height: 1.75;
-      }
-
-      .office-gallery-note {
-        padding-top: 1.2rem;
-        border-top: 1px solid var(--line);
-        font-size: 0.68rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
       .office-gallery-controls {
         display: grid;
         gap: 1.3rem;
@@ -2062,7 +2066,18 @@
         }
 
         .office-gallery-intro {
+          position: relative;
+          z-index: 2;
           grid-row: 2;
+          margin-top: -5.5rem;
+          padding-top: calc(clamp(2rem, 4vw, 3.5rem) + 5.5rem);
+          background: linear-gradient(
+            180deg,
+            rgba(238, 233, 223, 0.02) 0,
+            rgba(238, 233, 223, 0.68) 3rem,
+            var(--paper-deep) 5.5rem,
+            var(--paper-deep) 100%
+          );
         }
 
         .footer-main {
@@ -2144,11 +2159,15 @@
         }
 
         .intro-section::before {
-          background-position: 42% center;
+          background-position: 42% bottom;
         }
 
         .intro-section::after {
           background: rgba(246, 243, 236, 0.78);
+        }
+
+        .intro-section {
+          min-height: auto;
         }
 
         .service-item {
@@ -2265,7 +2284,7 @@
         }
 
         .office-gallery-intro {
-          padding: 1.8rem 1.6rem;
+          padding: calc(1.8rem + 5.5rem) 1.6rem 1.8rem;
         }
 
         .office-gallery-intro h3 {
@@ -2830,12 +2849,7 @@
           aria-labelledby="office-gallery-title"
         >
           <div class="office-gallery-intro">
-            <p class="section-label">Inside Artistic</p>
             <h3 id="office-gallery-title">A space designed to feel calm before care begins.</h3>
-            <p>
-              Explore the exterior, lobby, and thoughtful details that make our Fayetteville office feel welcoming.
-            </p>
-            <p class="office-gallery-note">Real photos from our Church Street practice</p>
             <div class="office-gallery-controls" aria-label="Office gallery controls">
               <div class="office-gallery-buttons">
                 <button class="office-gallery-arrow office-gallery-previous" type="button" aria-label="Previous office photo">←</button>
