@@ -1016,27 +1016,6 @@
         filter: saturate(0.82) contrast(0.96) brightness(0.96);
       }
 
-      .prayer-photo::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, transparent 58%, rgba(24, 32, 29, 0.58));
-        pointer-events: none;
-      }
-
-      .prayer-photo figcaption {
-        position: absolute;
-        right: 1.4rem;
-        bottom: 5.8rem;
-        left: 1.4rem;
-        z-index: 1;
-        color: rgba(255, 255, 255, 0.88);
-        font-size: 0.63rem;
-        font-weight: 700;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-
       .prayer-content {
         --prayer-content-pad: clamp(2.2rem, 4vw, 3.5rem);
         position: relative;
@@ -1133,19 +1112,45 @@
         border-left: 1px solid var(--line);
       }
 
-      .support-card:first-child {
+      .membership-card {
+        isolation: isolate;
         background: #e7ded2;
       }
 
-      .support-card:first-child::after {
-        content: "$";
+      .membership-photo {
         position: absolute;
-        right: -1rem;
-        bottom: -7rem;
-        color: rgba(135, 84, 46, 0.08);
-        font-family: "Allura", cursive;
-        font-size: 25rem;
-        line-height: 1;
+        inset: 0 0 0 auto;
+        z-index: 0;
+        width: 48%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: saturate(0.68) contrast(0.94) brightness(0.96);
+      }
+
+      .membership-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          90deg,
+          #e7ded2 0%,
+          #e7ded2 46%,
+          rgba(231, 222, 210, 0.9) 56%,
+          rgba(231, 222, 210, 0.2) 82%,
+          rgba(231, 222, 210, 0.08) 100%
+        );
+        pointer-events: none;
+      }
+
+      .membership-card > :not(.membership-photo) {
+        position: relative;
+        z-index: 2;
+      }
+
+      .membership-card > div {
+        width: min(62%, 34rem);
       }
 
       .support-card h2 {
@@ -1167,6 +1172,10 @@
         position: relative;
         z-index: 1;
         width: fit-content;
+      }
+
+      .membership-card .button {
+        z-index: 2;
       }
 
       .emergency-card {
@@ -1960,6 +1969,31 @@
           min-height: 26rem;
         }
 
+        .membership-card {
+          padding-top: 17rem;
+        }
+
+        .membership-photo {
+          inset: 0 0 auto;
+          width: 100%;
+          height: 14rem;
+          object-position: center 54%;
+        }
+
+        .membership-card::before {
+          background: linear-gradient(
+            180deg,
+            rgba(231, 222, 210, 0.02) 0,
+            rgba(231, 222, 210, 0.08) 48%,
+            rgba(231, 222, 210, 0.78) 78%,
+            #e7ded2 14rem
+          );
+        }
+
+        .membership-card > div {
+          width: 100%;
+        }
+
         .review-item {
           grid-template-columns: 2rem 1fr;
           gap: 0.7rem;
@@ -2368,7 +2402,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>In our waiting room</figcaption>
             </figure>
             <div class="prayer-content">
               <p class="prayer-script">Prayer wall</p>
@@ -2385,7 +2418,16 @@
 
       <section class="support-band" aria-label="Financial and emergency support">
         <div class="support-grid">
-          <article class="support-card">
+          <article class="support-card membership-card">
+            <img
+              class="membership-photo"
+              src="assets/dental-membership.webp"
+              width="365"
+              height="365"
+              alt="Coins collected in a glass jar with a green seedling, representing dental care savings."
+              loading="lazy"
+              decoding="async"
+            >
             <div>
               <p class="section-label">Care without dental insurance</p>
               <h2>Ask about the dental membership program.</h2>
