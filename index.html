@@ -1652,8 +1652,17 @@
         }
 
         .hero-media {
-          background-position: 52% bottom;
-          background-size: auto 57%;
+          background-position: center center;
+          background-size: auto 100%;
+        }
+
+        .hero::before {
+          background: linear-gradient(
+            180deg,
+            rgba(246, 243, 236, 0.84) 0%,
+            rgba(246, 243, 236, 0.78) 48%,
+            rgba(246, 243, 236, 0.68) 100%
+          );
         }
 
         .hero h1 {
