@@ -893,6 +893,168 @@
         text-transform: uppercase;
       }
 
+      .faith-section {
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        background:
+          radial-gradient(circle at 12% 20%, rgba(173, 116, 68, 0.2), transparent 28rem),
+          linear-gradient(135deg, #202a26, #151c19 72%);
+      }
+
+      .faith-section::before,
+      .faith-section::after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgba(234, 215, 195, 0.15);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .faith-section::before {
+        width: 34rem;
+        height: 34rem;
+        top: -20rem;
+        right: -8rem;
+      }
+
+      .faith-section::after {
+        width: 17rem;
+        height: 17rem;
+        right: 8rem;
+        bottom: -11rem;
+      }
+
+      .faith-grid {
+        position: relative;
+        z-index: 1;
+        min-height: 42rem;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.72fr);
+        gap: clamp(3rem, 9vw, 8rem);
+        align-items: center;
+        padding-block: clamp(5.5rem, 9vw, 8.5rem);
+      }
+
+      .faith-copy .section-label {
+        color: var(--bronze-pale);
+      }
+
+      .faith-copy h2 {
+        max-width: 13ch;
+        margin: 0;
+        font-size: clamp(3rem, 5.4vw, 5.2rem);
+        font-weight: 300;
+        letter-spacing: -0.055em;
+        line-height: 0.96;
+      }
+
+      .faith-copy h2 em {
+        color: var(--bronze-pale);
+        font-family: "Allura", cursive;
+        font-size: 1.15em;
+        font-weight: 400;
+      }
+
+      .faith-body {
+        max-width: 43rem;
+        display: grid;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .faith-body p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.68);
+        line-height: 1.85;
+      }
+
+      .faith-body strong {
+        color: rgba(255, 255, 255, 0.92);
+        font-weight: 500;
+      }
+
+      .faith-values {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem 1.6rem;
+        margin: 2rem 0 0;
+        padding: 1.4rem 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.13);
+        list-style: none;
+      }
+
+      .faith-values li {
+        color: var(--bronze-pale);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .prayer-card {
+        position: relative;
+        padding: clamp(2.2rem, 5vw, 4rem);
+        overflow: hidden;
+        color: var(--ink);
+        background: var(--paper);
+        box-shadow: 0 32px 80px rgba(0, 0, 0, 0.22);
+      }
+
+      .prayer-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.4;
+        background: repeating-linear-gradient(
+          180deg,
+          transparent 0,
+          transparent 2.7rem,
+          rgba(34, 36, 32, 0.06) 2.75rem,
+          rgba(34, 36, 32, 0.06) 2.8rem
+        );
+        pointer-events: none;
+      }
+
+      .prayer-card > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .prayer-script {
+        margin: 0 0 0.8rem;
+        color: var(--bronze-dark);
+        font-family: "Allura", cursive;
+        font-size: clamp(3.8rem, 7vw, 6rem);
+        line-height: 0.8;
+      }
+
+      .prayer-card h3 {
+        max-width: 15ch;
+        margin: 0;
+        font-size: clamp(1.8rem, 3vw, 2.7rem);
+        font-weight: 300;
+        letter-spacing: -0.04em;
+        line-height: 1.08;
+      }
+
+      .prayer-card > p:not(.prayer-script):not(.prayer-note) {
+        margin: 1.5rem 0 0;
+        color: var(--ink-soft);
+        line-height: 1.8;
+      }
+
+      .prayer-note {
+        margin: 2rem 0 0;
+        padding-top: 1.2rem;
+        border-top: 1px solid var(--line);
+        color: var(--bronze-dark);
+        font-size: 0.66rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
       .support-band {
         padding-block: 0;
         background: var(--white);
@@ -1566,6 +1728,7 @@
         .services-layout,
         .philosophy-grid,
         .about-grid,
+        .faith-grid,
         .reviews-grid,
         .visit-grid,
         .contact-layout,
@@ -1584,6 +1747,15 @@
 
         .doctor-art {
           min-height: 34rem;
+        }
+
+        .faith-grid {
+          min-height: 0;
+        }
+
+        .faith-copy,
+        .prayer-card {
+          width: min(100%, 42rem);
         }
 
         .support-grid {
@@ -1718,6 +1890,14 @@
 
         .about-fact:last-child {
           border-bottom: 0;
+        }
+
+        .faith-copy h2 {
+          font-size: clamp(2.8rem, 13vw, 4rem);
+        }
+
+        .prayer-card {
+          padding: 2.2rem 1.6rem;
         }
 
         .support-card {
@@ -2098,6 +2278,42 @@
         </div>
       </section>
 
+      <section class="faith-section" id="faith" aria-labelledby="faith-title">
+        <div class="container faith-grid">
+          <div class="faith-copy">
+            <p class="section-label">Faith in practice</p>
+            <h2 id="faith-title">Care guided by compassion, honesty, and <em>grace.</em></h2>
+            <div class="faith-body">
+              <p>
+                <strong>Artistic General Dentistry is a family-owned Christian practice.</strong> Our faith shapes how
+                we serve: listening well, treating every person with dignity, and doing our work with integrity.
+              </p>
+              <p>
+                When a patient welcomes it, we are glad to talk about the hope we find in Jesus or pray together.
+                Patients of every background and belief are welcome, and faith conversations are always guided by
+                each person’s comfort.
+              </p>
+            </div>
+            <ul class="faith-values" aria-label="Values shaped by our faith">
+              <li>Compassion</li>
+              <li>Integrity</li>
+              <li>Service</li>
+              <li>Respect</li>
+            </ul>
+          </div>
+
+          <aside class="prayer-card" aria-labelledby="prayer-wall-title">
+            <p class="prayer-script">Prayer wall</p>
+            <h3 id="prayer-wall-title">A quiet place for what matters beyond the appointment.</h3>
+            <p>
+              Patients and families are welcome to leave a request on the prayer wall in our waiting room or take a
+              moment to pray for someone else. Every request is treated with care.
+            </p>
+            <p class="prayer-note">Prayer is offered, never required.</p>
+          </aside>
+        </div>
+      </section>
+
       <section class="support-band" aria-label="Financial and emergency support">
         <div class="support-grid">
           <article class="support-card">
@@ -2294,6 +2510,10 @@
               <div class="faq-answer"><p>Services include preventive care, digital X-rays, oral cancer screening, periodontal care, restorative and cosmetic dentistry, implants, veneers, root canal therapy, and orthodontic treatment.</p></div>
             </details>
             <details>
+              <summary>How does faith fit into the patient experience?</summary>
+              <div class="faq-answer"><p>Our Christian faith shapes the practice’s commitment to compassion, integrity, and service. Patients of every background are welcome, and any conversation about faith or prayer is always optional and guided by each patient’s comfort.</p></div>
+            </details>
+            <details>
               <summary>Where is the practice located?</summary>
               <div class="faq-answer"><p>The office is at 455 Church Street in Fayetteville, Georgia 30214. Use the directions link above for a route from your current location.</p></div>
             </details>
@@ -2316,7 +2536,7 @@
               decoding="async"
             >
           </a>
-          <p>Precision-focused family, cosmetic, restorative, implant, and emergency dentistry with a warm, personal approach.</p>
+          <p>Family-owned dentistry shaped by craftsmanship, compassion, and grace. Every patient is welcomed and respected.</p>
         </div>
         <div class="footer-column">
           <h2>Visit</h2>
