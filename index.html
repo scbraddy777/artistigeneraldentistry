@@ -1002,7 +1002,7 @@
 
       .prayer-photo {
         position: relative;
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 1;
         margin: 0;
         overflow: hidden;
         background: #d8c4ad;
@@ -1027,7 +1027,7 @@
       .prayer-photo figcaption {
         position: absolute;
         right: 1.4rem;
-        bottom: 1.2rem;
+        bottom: 5.8rem;
         left: 1.4rem;
         z-index: 1;
         color: rgba(255, 255, 255, 0.88);
@@ -1038,15 +1038,24 @@
       }
 
       .prayer-content {
+        --prayer-content-pad: clamp(2.2rem, 4vw, 3.5rem);
         position: relative;
-        padding: clamp(2.2rem, 4vw, 3.5rem);
+        z-index: 2;
+        margin-top: -4.75rem;
+        padding: calc(var(--prayer-content-pad) + 4.75rem) var(--prayer-content-pad) var(--prayer-content-pad);
         overflow: hidden;
+        background: linear-gradient(
+          180deg,
+          rgba(246, 243, 236, 0.04) 0,
+          rgba(246, 243, 236, 0.68) 2.4rem,
+          var(--paper) 4.75rem
+        );
       }
 
       .prayer-content::before {
         content: "";
         position: absolute;
-        inset: 0;
+        inset: 4.75rem 0 0;
         opacity: 0.36;
         background: repeating-linear-gradient(
           180deg,
@@ -1944,7 +1953,7 @@
         }
 
         .prayer-content {
-          padding: 2.2rem 1.6rem;
+          padding: calc(2.2rem + 4.75rem) 1.6rem 2.2rem;
         }
 
         .support-card {
