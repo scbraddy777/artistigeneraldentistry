@@ -957,27 +957,28 @@
           linear-gradient(135deg, #202a26, #151c19 72%);
       }
 
-      .faith-section::before,
-      .faith-section::after {
+      .faith-section::before {
         content: "";
         position: absolute;
-        border: 1px solid rgba(234, 215, 195, 0.15);
-        border-radius: 50%;
+        inset: 0;
+        opacity: 0.3;
+        background: url("assets/office-faith-bracelets.jpg") left center / min(62rem, 72vw) auto no-repeat;
+        filter: saturate(0.62) contrast(0.92) brightness(0.72);
+        -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 34%, rgba(0, 0, 0, 0.72) 48%, transparent 72%);
+        mask-image: linear-gradient(90deg, #000 0%, #000 34%, rgba(0, 0, 0, 0.72) 48%, transparent 72%);
         pointer-events: none;
       }
 
-      .faith-section::before {
-        width: 34rem;
-        height: 34rem;
-        top: -20rem;
-        right: -8rem;
-      }
-
       .faith-section::after {
+        content: "";
+        position: absolute;
         width: 17rem;
         height: 17rem;
         right: 8rem;
         bottom: -11rem;
+        border: 1px solid rgba(234, 215, 195, 0.15);
+        border-radius: 50%;
+        pointer-events: none;
       }
 
       .faith-grid {
@@ -2038,6 +2039,14 @@
 
         .faith-copy {
           width: min(100%, 42rem);
+        }
+
+        .faith-section::before {
+          opacity: 0.25;
+          background-position: center top;
+          background-size: 100% auto;
+          -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.72) 19rem, transparent 42rem);
+          mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.72) 19rem, transparent 42rem);
         }
 
         .prayer-card {
