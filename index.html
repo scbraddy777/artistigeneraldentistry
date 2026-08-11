@@ -163,43 +163,12 @@
 
       .brand {
         width: fit-content;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.9rem;
+        display: block;
       }
 
-      .brand-mark {
-        width: 2.7rem;
-        height: 2.7rem;
-        display: grid;
-        place-items: center;
-        border: 1px solid var(--bronze);
-        border-radius: 50%;
-        color: var(--bronze-dark);
-        font-size: 0.64rem;
-        font-weight: 700;
-        letter-spacing: 0.08em;
-        line-height: 1;
-      }
-
-      .brand-copy {
-        display: grid;
-        gap: 0.1rem;
-      }
-
-      .brand-name {
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        line-height: 1.2;
-        text-transform: uppercase;
-      }
-
-      .brand-place {
-        color: var(--ink-soft);
-        font-size: 0.7rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
+      .brand-logo {
+        width: clamp(12.75rem, 18vw, 15.5rem);
+        height: auto;
       }
 
       .site-nav ul {
@@ -1382,8 +1351,10 @@
         color: var(--white);
       }
 
-      .footer-brand .brand-place {
-        color: rgba(255, 255, 255, 0.5);
+      .footer-brand .brand-logo {
+        width: min(100%, 20rem);
+        opacity: 0.9;
+        filter: brightness(0) invert(1);
       }
 
       .footer-brand p {
@@ -1638,13 +1609,8 @@
       }
 
       @media (max-width: 600px) {
-        .brand-name {
-          font-size: 0.69rem;
-          letter-spacing: 0.1em;
-        }
-
-        .brand-place {
-          font-size: 0.62rem;
+        .brand-logo {
+          width: 11.5rem;
         }
 
         .hero {
@@ -1833,6 +1799,7 @@
         "name": "Artistic General Dentistry",
         "alternateName": "Artie B. Ricaud, DDS, CDT",
         "url": "https://artiebricauddds.com/",
+        "logo": "https://artiebricauddds.com/assets/artistic-general-dentistry-logo.png",
         "telephone": "+1-770-461-3921",
         "faxNumber": "+1-770-461-0944",
         "address": {
@@ -1896,11 +1863,14 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="Artistic General Dentistry home">
-          <span class="brand-mark" aria-hidden="true">AGD</span>
-          <span class="brand-copy">
-            <span class="brand-name">Artistic General Dentistry</span>
-            <span class="brand-place">Fayetteville · Georgia</span>
-          </span>
+          <img
+            class="brand-logo"
+            src="assets/artistic-general-dentistry-logo.png"
+            width="2241"
+            height="662"
+            alt=""
+            decoding="async"
+          >
         </a>
 
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
@@ -2336,11 +2306,15 @@
       <div class="container footer-main">
         <div class="footer-brand">
           <a class="brand" href="#top" aria-label="Artistic General Dentistry, back to top">
-            <span class="brand-mark" aria-hidden="true">AGD</span>
-            <span class="brand-copy">
-              <span class="brand-name">Artistic General Dentistry</span>
-              <span class="brand-place">Fayetteville · Georgia</span>
-            </span>
+            <img
+              class="brand-logo"
+              src="assets/artistic-general-dentistry-logo.png"
+              width="2241"
+              height="662"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
           </a>
           <p>Precision-focused family, cosmetic, restorative, implant, and emergency dentistry with a warm, personal approach.</p>
         </div>

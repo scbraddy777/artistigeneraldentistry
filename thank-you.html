@@ -49,17 +49,14 @@
         backdrop-filter: blur(14px);
       }
 
-      .mark {
-        width: 3.2rem;
-        height: 3.2rem;
-        display: grid;
-        place-items: center;
-        border: 1px solid var(--bronze);
-        border-radius: 50%;
-        color: var(--bronze);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
+      .confirmation-brand {
+        width: min(100%, 20rem);
+        display: block;
+      }
+
+      .confirmation-logo {
+        width: 100%;
+        height: auto;
       }
 
       .script {
@@ -115,6 +112,16 @@
         background: var(--forest);
       }
 
+      a.confirmation-brand {
+        min-height: 0;
+        display: block;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
+        color: inherit;
+        background: transparent;
+      }
+
       a:focus-visible {
         outline: 3px solid rgba(173, 116, 68, 0.5);
         outline-offset: 4px;
@@ -142,7 +149,16 @@
   </head>
   <body>
     <main>
-      <div class="mark" aria-hidden="true">AGD</div>
+      <a class="confirmation-brand" href="/" aria-label="Artistic General Dentistry homepage">
+        <img
+          class="confirmation-logo"
+          src="assets/artistic-general-dentistry-logo.png"
+          width="2241"
+          height="662"
+          alt=""
+          decoding="async"
+        >
+      </a>
       <p class="script">Thank you</p>
       <h1>Your request is on its way.</h1>
       <p>The office will follow up to help find the right appointment time. If your concern is urgent, please call now.</p>
