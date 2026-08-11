@@ -1438,27 +1438,6 @@
         gap: 0.75rem;
       }
 
-      .location-gallery-toggle {
-        border-color: rgba(255, 255, 255, 0.42);
-        color: var(--white);
-        background: transparent;
-      }
-
-      .location-gallery-toggle:hover {
-        border-color: var(--white);
-        background: rgba(255, 255, 255, 0.08);
-      }
-
-      .location-gallery-toggle span[aria-hidden="true"] {
-        font-size: 1.15rem;
-        font-weight: 400;
-        transition: transform 0.25s ease;
-      }
-
-      .location-gallery-toggle[aria-expanded="true"] span[aria-hidden="true"] {
-        transform: rotate(45deg);
-      }
-
       .office-gallery {
         display: grid;
         grid-template-columns: minmax(17rem, 0.52fr) minmax(0, 1fr);
@@ -1468,10 +1447,6 @@
         border: 1px solid var(--line);
         background: var(--paper-deep);
         box-shadow: 0 30px 80px rgba(26, 34, 31, 0.12);
-      }
-
-      .office-gallery[hidden] {
-        display: none;
       }
 
       .office-gallery-intro {
@@ -1567,18 +1542,23 @@
       }
 
       .office-gallery-stage {
+        position: relative;
         min-width: 0;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
         background:
           radial-gradient(circle at 85% 15%, rgba(179, 126, 80, 0.16), transparent 30%),
           var(--forest);
       }
 
       .office-slide {
-        position: relative;
-        min-height: 100%;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
         display: grid;
         place-items: center;
-        aspect-ratio: 4 / 3;
         margin: 0;
       }
 
@@ -1590,20 +1570,6 @@
         width: 100%;
         height: 100%;
         object-fit: contain;
-      }
-
-      .office-slide figcaption {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        padding: 3.5rem 1.5rem 1.2rem;
-        color: rgba(255, 255, 255, 0.9);
-        background: linear-gradient(180deg, transparent, rgba(16, 27, 24, 0.82));
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
       }
 
       .contact-section {
@@ -2310,11 +2276,6 @@
           padding-top: 2.2rem;
         }
 
-        .office-slide figcaption {
-          padding-inline: 1rem;
-          font-size: 0.65rem;
-        }
-
         .review-item {
           grid-template-columns: 2rem 1fr;
           gap: 0.7rem;
@@ -2859,15 +2820,6 @@
                 target="_blank"
                 rel="noreferrer"
               >Get directions</a>
-              <button
-                class="button location-gallery-toggle"
-                type="button"
-                aria-expanded="false"
-                aria-controls="office-gallery"
-              >
-                <span class="location-gallery-toggle-label">View office photos</span>
-                <span aria-hidden="true">+</span>
-              </button>
             </div>
           </aside>
         </div>
@@ -2876,7 +2828,6 @@
           class="office-gallery"
           id="office-gallery"
           aria-labelledby="office-gallery-title"
-          hidden
         >
           <div class="office-gallery-intro">
             <p class="section-label">Inside Artistic</p>
@@ -2918,7 +2869,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>Exterior at sunset</figcaption>
             </figure>
             <figure class="office-slide" data-office-slide hidden>
               <img
@@ -2929,7 +2879,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>Main entrance</figcaption>
             </figure>
             <figure class="office-slide" data-office-slide hidden>
               <img
@@ -2940,7 +2889,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>Church Street exterior</figcaption>
             </figure>
             <figure class="office-slide" data-office-slide hidden>
               <img
@@ -2951,7 +2899,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>Waiting room seating</figcaption>
             </figure>
             <figure class="office-slide" data-office-slide hidden>
               <img
@@ -2962,7 +2909,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>Lobby entrance</figcaption>
             </figure>
             <figure class="office-slide" data-office-slide hidden>
               <img
@@ -2973,7 +2919,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>Waiting room lounge</figcaption>
             </figure>
             <figure class="office-slide" data-office-slide hidden>
               <img
@@ -2984,7 +2929,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>Prayer wall details</figcaption>
             </figure>
             <figure class="office-slide" data-office-slide hidden>
               <img
@@ -2995,7 +2939,6 @@
                 loading="lazy"
                 decoding="async"
               >
-              <figcaption>Faith-centered details</figcaption>
             </figure>
           </div>
         </section>
@@ -3165,9 +3108,6 @@
       navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
       document.getElementById("year").textContent = new Date().getFullYear();
 
-      const officeGalleryToggle = document.querySelector(".location-gallery-toggle");
-      const officeGalleryToggleLabel = document.querySelector(".location-gallery-toggle-label");
-      const officeGallery = document.getElementById("office-gallery");
       const officeGalleryStage = document.querySelector(".office-gallery-stage");
       const officeSlides = Array.from(document.querySelectorAll("[data-office-slide]"));
       const officeGalleryDots = Array.from(document.querySelectorAll("[data-office-slide-index]"));
@@ -3190,20 +3130,6 @@
 
         officeGalleryPosition.textContent = `${currentOfficeSlide + 1} / ${officeSlides.length}`;
       }
-
-      officeGalleryToggle.addEventListener("click", () => {
-        const willOpen = officeGallery.hidden;
-        officeGallery.hidden = !willOpen;
-        officeGalleryToggle.setAttribute("aria-expanded", String(willOpen));
-        officeGalleryToggleLabel.textContent = willOpen ? "Close office photos" : "View office photos";
-
-        if (willOpen) {
-          const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-          requestAnimationFrame(() => {
-            officeGallery.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
-          });
-        }
-      });
 
       officeGalleryPrevious.addEventListener("click", () => showOfficeSlide(currentOfficeSlide - 1));
       officeGalleryNext.addEventListener("click", () => showOfficeSlide(currentOfficeSlide + 1));
