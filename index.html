@@ -388,12 +388,17 @@
         background: currentColor;
       }
 
+      .hero-heading {
+        display: grid;
+        gap: 1rem;
+      }
+
       .script-line {
-        margin: 0 0 1.15rem 2.7rem;
+        margin: 0 0 0 2.7rem;
         color: var(--bronze);
         font-family: "Allura", cursive;
         font-size: clamp(3rem, 5.7vw, 5.4rem);
-        line-height: 0.9;
+        line-height: 1.15;
         transform: rotate(-3deg);
       }
 
@@ -961,9 +966,9 @@
         content: "";
         position: absolute;
         inset: 0;
-        opacity: 0.3;
+        opacity: 0.36;
         background: url("assets/office-faith-bracelets.jpg") left center / min(62rem, 72vw) auto no-repeat;
-        filter: saturate(0.62) contrast(0.92) brightness(0.72);
+        filter: saturate(0.72) contrast(0.94) brightness(0.8);
         -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 34%, rgba(0, 0, 0, 0.72) 48%, transparent 72%);
         mask-image: linear-gradient(90deg, #000 0%, #000 34%, rgba(0, 0, 0, 0.72) 48%, transparent 72%);
         pointer-events: none;
@@ -1990,9 +1995,13 @@
           width: min(100%, 37rem);
         }
 
+        .hero-heading {
+          gap: 1.25rem;
+        }
+
         .script-line {
-          margin: 0 0 1.15rem 1.1rem;
-          line-height: 0.9;
+          margin: 0 0 0 1.1rem;
+          line-height: 1.15;
         }
 
         .proof-grid {
@@ -2042,7 +2051,7 @@
         }
 
         .faith-section::before {
-          opacity: 0.25;
+          opacity: 0.3;
           background-position: center top;
           background-size: 100% auto;
           -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.72) 19rem, transparent 42rem);
@@ -2476,8 +2485,10 @@
         <div class="container hero-inner">
           <div class="hero-copy">
             <p class="kicker">Family · Cosmetic · Restorative</p>
-            <p class="script-line">Welcome</p>
-            <h1 id="hero-title">Precision dentistry.<span>Personal care.</span></h1>
+            <div class="hero-heading">
+              <p class="script-line">Welcome</p>
+              <h1 id="hero-title">Precision dentistry.<span>Personal care.</span></h1>
+            </div>
             <p class="hero-lead">
               Thoughtful dentistry in Fayetteville, led by a dentist with an artist’s eye and a technician’s
               understanding of how a smile should look, feel, and function.
