@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#26322d">
+    <title>Request received | Artistic General Dentistry</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f6f3ec;
+        --white: #fffdf9;
+        --ink: #222420;
+        --forest: #26322d;
+        --bronze: #ad7444;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100svh;
+        display: grid;
+        place-items: center;
+        margin: 0;
+        padding: 1.5rem;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(246, 243, 236, 0.98) 0 42%, rgba(246, 243, 236, 0.78) 62%, rgba(246, 243, 236, 0.15)),
+          url("assets/dental-tools.webp") center bottom / cover no-repeat;
+        font-family: "Raleway", sans-serif;
+      }
+
+      main {
+        width: min(100%, 45rem);
+        padding: clamp(2.2rem, 7vw, 5rem);
+        border: 1px solid rgba(34, 36, 32, 0.12);
+        background: rgba(255, 253, 249, 0.92);
+        box-shadow: 0 24px 70px rgba(34, 36, 32, 0.13);
+        backdrop-filter: blur(14px);
+      }
+
+      .mark {
+        width: 3.2rem;
+        height: 3.2rem;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--bronze);
+        border-radius: 50%;
+        color: var(--bronze);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+
+      .script {
+        margin: 2rem 0 -0.8rem;
+        color: var(--bronze);
+        font-family: "Allura", cursive;
+        font-size: clamp(3.4rem, 10vw, 5.5rem);
+        line-height: 0.8;
+      }
+
+      h1 {
+        max-width: 10ch;
+        margin: 0;
+        font-size: clamp(2.7rem, 8vw, 4.8rem);
+        font-weight: 300;
+        letter-spacing: -0.055em;
+        line-height: 0.95;
+      }
+
+      p {
+        max-width: 34rem;
+        margin: 1.5rem 0 0;
+        color: #60635d;
+        line-height: 1.8;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 2rem;
+      }
+
+      a {
+        min-height: 3.1rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(34, 36, 32, 0.3);
+        border-radius: 999px;
+        padding: 0.85rem 1.35rem;
+        color: inherit;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      a:first-child {
+        border-color: var(--forest);
+        color: var(--white);
+        background: var(--forest);
+      }
+
+      a:focus-visible {
+        outline: 3px solid rgba(173, 116, 68, 0.5);
+        outline-offset: 4px;
+      }
+
+      @media (max-width: 560px) {
+        body {
+          align-items: start;
+          padding: 0;
+          background-position: 55% bottom;
+        }
+
+        main {
+          min-height: 100svh;
+          display: grid;
+          align-content: center;
+          border: 0;
+        }
+
+        .actions a {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="mark" aria-hidden="true">AGD</div>
+      <p class="script">Thank you</p>
+      <h1>Your request is on its way.</h1>
+      <p>The office will follow up to help find the right appointment time. If your concern is urgent, please call now.</p>
+      <div class="actions">
+        <a href="tel:+17704613921">Call 770.461.3921</a>
+        <a href="/">Return to the homepage</a>
+      </div>
+    </main>
+  </body>
+</html>

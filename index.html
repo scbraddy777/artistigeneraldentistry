@@ -1,0 +1,2386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Artistic General Dentistry | Dentist in Fayetteville, GA</title>
+    <meta
+      name="description"
+      content="Personal, precision-focused dentistry in Fayetteville, Georgia. Explore preventive, cosmetic, restorative, implant, emergency, and membership options with Dr. Artie Ricaud."
+    >
+    <meta name="theme-color" content="#f6f3ec">
+    <link rel="canonical" href="https://artiebricauddds.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Artistic General Dentistry | Fayetteville Dentist">
+    <meta
+      property="og:description"
+      content="Precision in every detail. Warmth in every visit. Family, cosmetic, restorative, implant, and emergency dentistry in Fayetteville, GA."
+    >
+    <meta property="og:url" content="https://artiebricauddds.com/">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Allura&amp;family=Raleway:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    >
+    <style>
+      :root {
+        --paper: #f6f3ec;
+        --paper-deep: #eee9df;
+        --white: #fffdf9;
+        --ink: #222420;
+        --ink-soft: #60635d;
+        --forest: #26322d;
+        --sage: #6a766e;
+        --bronze: #ad7444;
+        --bronze-dark: #87542e;
+        --bronze-pale: #ead7c3;
+        --line: rgba(34, 36, 32, 0.14);
+        --line-light: rgba(255, 255, 255, 0.16);
+        --shadow: 0 24px 70px rgba(34, 36, 32, 0.1);
+        --radius: 2rem;
+        --max: 1240px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: "Raleway", sans-serif;
+        font-size: 1rem;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      button,
+      summary {
+        cursor: pointer;
+      }
+
+      :focus-visible {
+        outline: 3px solid rgba(173, 116, 68, 0.5);
+        outline-offset: 4px;
+      }
+
+      .skip-link {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 1000;
+        padding: 0.8rem 1rem;
+        color: var(--white);
+        background: var(--forest);
+        transform: translateY(-180%);
+        transition: transform 0.2s ease;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
+      .container {
+        width: min(calc(100% - 3rem), var(--max));
+        margin-inline: auto;
+      }
+
+      .announcement {
+        position: relative;
+        z-index: 70;
+        color: rgba(255, 255, 255, 0.82);
+        background: var(--forest);
+        font-size: 0.74rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .announcement-inner {
+        min-height: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.25rem;
+      }
+
+      .announcement a {
+        color: var(--white);
+      }
+
+      .announcement a:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.25rem;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        border-bottom: 1px solid rgba(34, 36, 32, 0.08);
+        background: rgba(246, 243, 236, 0.9);
+        backdrop-filter: blur(18px);
+      }
+
+      .header-inner {
+        min-height: 5.5rem;
+        display: grid;
+        grid-template-columns: minmax(220px, 1fr) auto auto;
+        align-items: center;
+        gap: 2.2rem;
+      }
+
+      .brand {
+        width: fit-content;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.9rem;
+      }
+
+      .brand-mark {
+        width: 2.7rem;
+        height: 2.7rem;
+        display: grid;
+        place-items: center;
+        border: 1px solid var(--bronze);
+        border-radius: 50%;
+        color: var(--bronze-dark);
+        font-size: 0.64rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        line-height: 1;
+      }
+
+      .brand-copy {
+        display: grid;
+        gap: 0.1rem;
+      }
+
+      .brand-name {
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .brand-place {
+        color: var(--ink-soft);
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .site-nav ul {
+        display: flex;
+        align-items: center;
+        gap: 1.75rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .site-nav a {
+        position: relative;
+        color: var(--ink-soft);
+        font-size: 0.77rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .site-nav a::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -0.4rem;
+        left: 0;
+        height: 1px;
+        background: var(--bronze);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.25s ease;
+      }
+
+      .site-nav a:hover::after,
+      .site-nav a:focus-visible::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      .menu-button {
+        display: none;
+        width: 3rem;
+        height: 3rem;
+        place-items: center;
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        color: var(--ink);
+        background: transparent;
+      }
+
+      .menu-button span,
+      .menu-button span::before,
+      .menu-button span::after {
+        width: 1.15rem;
+        height: 1px;
+        display: block;
+        background: currentColor;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .menu-button span {
+        position: relative;
+      }
+
+      .menu-button span::before,
+      .menu-button span::after {
+        content: "";
+        position: absolute;
+        left: 0;
+      }
+
+      .menu-button span::before {
+        transform: translateY(-0.35rem);
+      }
+
+      .menu-button span::after {
+        transform: translateY(0.35rem);
+      }
+
+      .menu-button[aria-expanded="true"] span {
+        background: transparent;
+      }
+
+      .menu-button[aria-expanded="true"] span::before {
+        transform: rotate(45deg);
+      }
+
+      .menu-button[aria-expanded="true"] span::after {
+        transform: rotate(-45deg);
+      }
+
+      .button {
+        min-height: 3.15rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 0.85rem 1.35rem;
+        font-size: 0.76rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        line-height: 1;
+        text-transform: uppercase;
+        transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button-primary {
+        color: var(--white);
+        background: var(--bronze-dark);
+        box-shadow: 0 12px 30px rgba(135, 84, 46, 0.2);
+      }
+
+      .button-primary:hover {
+        background: #704325;
+      }
+
+      .button-outline {
+        border-color: rgba(34, 36, 32, 0.35);
+        background: rgba(255, 253, 249, 0.4);
+      }
+
+      .button-outline:hover {
+        border-color: var(--bronze-dark);
+        color: var(--bronze-dark);
+        background: var(--white);
+      }
+
+      .button-light {
+        color: var(--forest);
+        background: var(--white);
+      }
+
+      .button-arrow::after {
+        content: "↗";
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .hero {
+        position: relative;
+        min-height: max(42rem, calc(100svh - 8rem));
+        display: flex;
+        overflow: hidden;
+        isolation: isolate;
+        background: #fbfaf6;
+      }
+
+      .hero-media {
+        position: absolute;
+        inset: 0;
+        z-index: -3;
+        background-image: url("assets/dental-tools.webp");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: image-in 1.2s 0.15s both ease-out;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+        background: linear-gradient(
+          90deg,
+          rgba(246, 243, 236, 1) 0%,
+          rgba(246, 243, 236, 0.98) 34%,
+          rgba(246, 243, 236, 0.87) 48%,
+          rgba(246, 243, 236, 0.1) 74%,
+          rgba(246, 243, 236, 0) 100%
+        );
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        z-index: -1;
+        height: 28%;
+        background: linear-gradient(0deg, rgba(26, 29, 27, 0.11), transparent);
+        pointer-events: none;
+      }
+
+      .hero-inner {
+        display: flex;
+        align-items: center;
+        padding-block: clamp(4rem, 8vw, 7.5rem);
+      }
+
+      .hero-copy {
+        width: min(100%, 40rem);
+        animation: copy-in 0.85s both ease-out;
+      }
+
+      .kicker {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        margin: 0 0 1rem;
+        color: var(--bronze-dark);
+        font-size: 0.73rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .kicker::before {
+        content: "";
+        width: 2.5rem;
+        height: 1px;
+        background: currentColor;
+      }
+
+      .script-line {
+        margin: 0 0 -1.1rem 2.7rem;
+        color: var(--bronze);
+        font-family: "Allura", cursive;
+        font-size: clamp(3rem, 5.7vw, 5.4rem);
+        line-height: 0.8;
+        transform: rotate(-3deg);
+      }
+
+      .hero h1 {
+        max-width: 12.5ch;
+        margin: 0;
+        font-size: clamp(3.25rem, 5.2vw, 5.2rem);
+        font-weight: 300;
+        letter-spacing: -0.055em;
+        line-height: 0.95;
+      }
+
+      .hero h1 span {
+        display: block;
+        color: var(--sage);
+      }
+
+      .hero-lead {
+        max-width: 36rem;
+        margin: 1.7rem 0 0;
+        color: #4f534d;
+        font-size: clamp(1rem, 1.3vw, 1.14rem);
+        line-height: 1.75;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 2rem;
+      }
+
+      .hero-location {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        margin-top: 1.35rem;
+        color: var(--ink-soft);
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+
+      .hero-location svg {
+        flex: 0 0 auto;
+        color: var(--bronze-dark);
+      }
+
+      .proof-bar {
+        position: relative;
+        z-index: 2;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .proof-item {
+        min-height: 7.2rem;
+        display: grid;
+        align-content: center;
+        gap: 0.25rem;
+        padding: 1.25rem 1.5rem;
+        border-left: 1px solid var(--line);
+      }
+
+      .proof-item:last-child {
+        border-right: 1px solid var(--line);
+      }
+
+      .proof-item strong {
+        font-size: 1.08rem;
+        font-weight: 600;
+      }
+
+      .proof-item span {
+        color: var(--ink-soft);
+        font-size: 0.74rem;
+        font-weight: 600;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+      }
+
+      .proof-rating strong {
+        color: var(--bronze-dark);
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .section {
+        padding-block: clamp(5.5rem, 10vw, 9rem);
+      }
+
+      .section-white {
+        background: var(--white);
+      }
+
+      .section-label {
+        margin: 0 0 1.1rem;
+        color: var(--bronze-dark);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .display-heading {
+        margin: 0;
+        font-size: clamp(2.6rem, 5.4vw, 5.2rem);
+        font-weight: 300;
+        letter-spacing: -0.05em;
+        line-height: 0.98;
+      }
+
+      .display-heading em {
+        color: var(--bronze);
+        font-family: "Allura", cursive;
+        font-size: 1.3em;
+        font-style: normal;
+        letter-spacing: 0;
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) minmax(20rem, 0.65fr);
+        align-items: end;
+        gap: clamp(3rem, 9vw, 8rem);
+      }
+
+      .intro-copy {
+        padding-bottom: 0.5rem;
+      }
+
+      .intro-copy p {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 1.05rem;
+        line-height: 1.85;
+      }
+
+      .intro-copy p + p {
+        margin-top: 1.2rem;
+      }
+
+      .signature {
+        margin-top: 1.75rem;
+        color: var(--bronze-dark);
+        font-family: "Allura", cursive;
+        font-size: 2.6rem;
+        line-height: 1;
+      }
+
+      .services-layout {
+        display: grid;
+        grid-template-columns: minmax(17rem, 0.68fr) minmax(0, 1.32fr);
+        gap: clamp(3rem, 8vw, 7rem);
+      }
+
+      .services-intro {
+        align-self: start;
+        position: sticky;
+        top: 8rem;
+      }
+
+      .services-intro h2,
+      .about-copy h2,
+      .reviews-heading h2,
+      .visit-copy h2,
+      .contact-heading h2,
+      .faq-heading h2 {
+        margin: 0;
+        font-size: clamp(2.4rem, 4.3vw, 4.2rem);
+        font-weight: 300;
+        letter-spacing: -0.045em;
+        line-height: 1;
+      }
+
+      .services-intro p {
+        margin: 1.4rem 0 1.8rem;
+        color: var(--ink-soft);
+        line-height: 1.8;
+      }
+
+      .service-list {
+        border-top: 1px solid var(--line);
+      }
+
+      .service-item {
+        display: grid;
+        grid-template-columns: 3.2rem minmax(10rem, 0.65fr) minmax(15rem, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+        padding-block: 2rem;
+        border-bottom: 1px solid var(--line);
+        transition: padding 0.25s ease, border-color 0.25s ease;
+      }
+
+      .service-item:hover {
+        padding-inline: 0.8rem;
+        border-color: var(--bronze);
+      }
+
+      .service-number {
+        color: var(--bronze);
+        font-family: "Allura", cursive;
+        font-size: 2rem;
+        line-height: 1;
+      }
+
+      .service-item h3 {
+        margin: 0;
+        font-size: 1.22rem;
+        font-weight: 600;
+        line-height: 1.35;
+      }
+
+      .service-item p {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.93rem;
+        line-height: 1.75;
+      }
+
+      .philosophy {
+        position: relative;
+        overflow: hidden;
+        color: var(--white);
+        background: var(--forest);
+      }
+
+      .philosophy::before {
+        content: "AR";
+        position: absolute;
+        top: -5rem;
+        right: -2rem;
+        color: rgba(255, 255, 255, 0.025);
+        font-family: "Allura", cursive;
+        font-size: min(50vw, 38rem);
+        line-height: 1;
+        transform: rotate(-10deg);
+      }
+
+      .philosophy-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.75fr);
+        gap: clamp(3rem, 9vw, 8rem);
+      }
+
+      .philosophy-copy h2 {
+        max-width: 12ch;
+        margin: 0;
+        font-size: clamp(2.8rem, 5vw, 5rem);
+        font-weight: 300;
+        letter-spacing: -0.05em;
+        line-height: 1;
+      }
+
+      .philosophy-copy h2 em {
+        color: var(--bronze-pale);
+        font-family: "Allura", cursive;
+        font-size: 1.22em;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+
+      .principles {
+        display: grid;
+        gap: 0;
+        margin-top: 3rem;
+        border-top: 1px solid var(--line-light);
+      }
+
+      .principle {
+        display: grid;
+        grid-template-columns: 3rem 1fr;
+        gap: 1rem;
+        padding-block: 1.5rem;
+        border-bottom: 1px solid var(--line-light);
+      }
+
+      .principle span {
+        color: var(--bronze-pale);
+        font-size: 0.72rem;
+        letter-spacing: 0.12em;
+      }
+
+      .principle h3 {
+        margin: 0 0 0.35rem;
+        font-size: 1.03rem;
+        font-weight: 600;
+      }
+
+      .principle p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.64);
+        font-size: 0.92rem;
+      }
+
+      .comfort-panel {
+        align-self: end;
+        padding: clamp(2rem, 4vw, 3.25rem);
+        border: 1px solid var(--line-light);
+        background: rgba(255, 255, 255, 0.055);
+        backdrop-filter: blur(10px);
+      }
+
+      .comfort-script {
+        margin: 0;
+        color: var(--bronze-pale);
+        font-family: "Allura", cursive;
+        font-size: clamp(3.5rem, 6vw, 5.8rem);
+        line-height: 0.8;
+      }
+
+      .comfort-panel h3 {
+        margin: 1.4rem 0 0.8rem;
+        font-size: 1.45rem;
+        font-weight: 500;
+      }
+
+      .comfort-panel > p:not(.comfort-script) {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.68);
+      }
+
+      .check-list {
+        display: grid;
+        gap: 0.85rem;
+        margin: 1.8rem 0 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .check-list li {
+        display: flex;
+        gap: 0.8rem;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.9rem;
+      }
+
+      .check-list li::before {
+        content: "";
+        width: 1.1rem;
+        height: 1.1rem;
+        flex: 0 0 auto;
+        margin-top: 0.2rem;
+        border: 1px solid var(--bronze-pale);
+        border-radius: 50%;
+        background: radial-gradient(circle, var(--bronze-pale) 0 24%, transparent 28%);
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: minmax(20rem, 0.85fr) minmax(0, 1.15fr);
+        gap: clamp(3rem, 9vw, 8rem);
+        align-items: center;
+      }
+
+      .doctor-art {
+        position: relative;
+        min-height: 39rem;
+        overflow: hidden;
+        background:
+          linear-gradient(rgba(255, 253, 249, 0.06) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 253, 249, 0.06) 1px, transparent 1px),
+          linear-gradient(145deg, #455149, #26322d 62%, #19201d);
+        background-size: 3.5rem 3.5rem, 3.5rem 3.5rem, auto;
+        box-shadow: var(--shadow);
+      }
+
+      .doctor-art::before {
+        content: "";
+        position: absolute;
+        inset: 11% 14%;
+        border: 1px solid rgba(234, 215, 195, 0.5);
+        border-radius: 50% 50% 48% 52%;
+        transform: rotate(11deg);
+      }
+
+      .doctor-art::after {
+        content: "";
+        position: absolute;
+        width: 23rem;
+        height: 23rem;
+        right: -9rem;
+        bottom: -8rem;
+        border: 1px solid rgba(234, 215, 195, 0.32);
+        border-radius: 50%;
+      }
+
+      .doctor-monogram {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: var(--bronze-pale);
+        font-family: "Allura", cursive;
+        font-size: clamp(9rem, 18vw, 15rem);
+        line-height: 1;
+        transform: translate(-52%, -54%) rotate(-8deg);
+      }
+
+      .doctor-caption {
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        left: 2rem;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 1rem;
+        color: var(--white);
+      }
+
+      .doctor-caption strong {
+        display: block;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      .doctor-caption span {
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 0.7rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .credential-seal {
+        width: 5.4rem;
+        height: 5.4rem;
+        display: grid;
+        place-items: center;
+        border: 1px solid rgba(234, 215, 195, 0.75);
+        border-radius: 50%;
+        color: var(--bronze-pale);
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.13em;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .about-copy .large-copy {
+        margin: 1.6rem 0 0;
+        color: var(--ink-soft);
+        font-size: 1.12rem;
+        line-height: 1.9;
+      }
+
+      .about-copy .body-copy {
+        margin: 1.2rem 0 0;
+        color: var(--ink-soft);
+        line-height: 1.8;
+      }
+
+      .about-facts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 2.4rem;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .about-fact {
+        min-height: 7.5rem;
+        display: grid;
+        align-content: center;
+        gap: 0.25rem;
+        padding: 1rem;
+        border-right: 1px solid var(--line);
+      }
+
+      .about-fact:first-child {
+        padding-left: 0;
+      }
+
+      .about-fact:last-child {
+        border-right: 0;
+      }
+
+      .about-fact strong {
+        color: var(--bronze-dark);
+        font-size: 1.65rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+
+      .about-fact span {
+        color: var(--ink-soft);
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .support-band {
+        padding-block: 0;
+        background: var(--white);
+      }
+
+      .support-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .support-card {
+        position: relative;
+        min-height: 24rem;
+        display: grid;
+        align-content: space-between;
+        gap: 3rem;
+        padding: clamp(2.4rem, 5vw, 4.5rem);
+        overflow: hidden;
+      }
+
+      .support-card + .support-card {
+        border-left: 1px solid var(--line);
+      }
+
+      .support-card:first-child {
+        background: #e7ded2;
+      }
+
+      .support-card:first-child::after {
+        content: "$";
+        position: absolute;
+        right: -1rem;
+        bottom: -7rem;
+        color: rgba(135, 84, 46, 0.08);
+        font-family: "Allura", cursive;
+        font-size: 25rem;
+        line-height: 1;
+      }
+
+      .support-card h2 {
+        max-width: 14ch;
+        margin: 0;
+        font-size: clamp(2.1rem, 3.8vw, 3.6rem);
+        font-weight: 300;
+        letter-spacing: -0.04em;
+        line-height: 1.02;
+      }
+
+      .support-card p {
+        max-width: 35rem;
+        margin: 1.2rem 0 0;
+        color: var(--ink-soft);
+      }
+
+      .support-card .button {
+        position: relative;
+        z-index: 1;
+        width: fit-content;
+      }
+
+      .emergency-card {
+        color: var(--white);
+        background: #a96e3d;
+      }
+
+      .emergency-card p {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .emergency-card .section-label {
+        color: var(--bronze-pale);
+      }
+
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: minmax(17rem, 0.58fr) minmax(0, 1.42fr);
+        gap: clamp(3rem, 8vw, 7rem);
+        align-items: start;
+      }
+
+      .rating {
+        margin-top: 2.3rem;
+      }
+
+      .rating-number {
+        color: var(--bronze-dark);
+        font-size: clamp(5.5rem, 10vw, 9rem);
+        font-weight: 300;
+        letter-spacing: -0.08em;
+        line-height: 0.8;
+      }
+
+      .rating-stars {
+        margin-top: 1.4rem;
+        color: var(--bronze);
+        font-size: 1.1rem;
+        letter-spacing: 0.2em;
+      }
+
+      .rating-label {
+        margin: 0.5rem 0 1.5rem;
+        color: var(--ink-soft);
+        font-size: 0.82rem;
+      }
+
+      .review-list {
+        border-top: 1px solid var(--line);
+      }
+
+      .review-item {
+        display: grid;
+        grid-template-columns: 2.5rem 1fr;
+        gap: 1.2rem;
+        padding-block: 2.2rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .quote-mark {
+        color: var(--bronze);
+        font-family: "Allura", cursive;
+        font-size: 4.2rem;
+        line-height: 0.7;
+      }
+
+      .review-item blockquote {
+        margin: 0;
+        font-size: clamp(1.25rem, 2.3vw, 1.8rem);
+        font-weight: 300;
+        letter-spacing: -0.025em;
+        line-height: 1.4;
+      }
+
+      .review-item cite {
+        display: block;
+        margin-top: 1rem;
+        color: var(--ink-soft);
+        font-size: 0.72rem;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .visit-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(20rem, 0.8fr);
+        gap: clamp(3rem, 9vw, 8rem);
+      }
+
+      .visit-copy > p {
+        max-width: 40rem;
+        margin: 1.4rem 0 0;
+        color: var(--ink-soft);
+        line-height: 1.8;
+      }
+
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 3rem;
+        border-top: 1px solid var(--line);
+      }
+
+      .step {
+        padding: 1.5rem 1.5rem 0 0;
+      }
+
+      .step-number {
+        display: block;
+        margin-bottom: 1.5rem;
+        color: var(--bronze);
+        font-family: "Allura", cursive;
+        font-size: 2.2rem;
+        line-height: 1;
+      }
+
+      .step h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1rem;
+      }
+
+      .step p {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.87rem;
+      }
+
+      .location-card {
+        position: relative;
+        padding: clamp(2rem, 4vw, 3.4rem);
+        color: var(--white);
+        background: var(--forest);
+        box-shadow: var(--shadow);
+      }
+
+      .location-card::before {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        border: 1px solid rgba(234, 215, 195, 0.45);
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(234, 215, 195, 0.6) 0 4%, transparent 5%);
+      }
+
+      .location-card h3 {
+        max-width: 12ch;
+        margin: 0 0 1rem;
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: -0.035em;
+        line-height: 1.1;
+      }
+
+      .location-address {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      .hours {
+        margin: 2rem 0;
+        border-top: 1px solid var(--line-light);
+      }
+
+      .hours-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 0.72rem;
+        border-bottom: 1px solid var(--line-light);
+        color: rgba(255, 255, 255, 0.72);
+        font-size: 0.82rem;
+      }
+
+      .hours-row strong {
+        color: var(--white);
+        font-weight: 500;
+      }
+
+      .contact-section {
+        color: var(--white);
+        background: #9c6437;
+      }
+
+      .contact-layout {
+        display: grid;
+        grid-template-columns: minmax(17rem, 0.7fr) minmax(0, 1.3fr);
+        gap: clamp(3rem, 8vw, 7rem);
+        align-items: start;
+      }
+
+      .contact-heading {
+        position: sticky;
+        top: 8rem;
+      }
+
+      .contact-heading .section-label {
+        color: var(--bronze-pale);
+      }
+
+      .contact-heading p {
+        margin: 1.4rem 0 0;
+        color: rgba(255, 255, 255, 0.72);
+      }
+
+      .contact-direct {
+        display: grid;
+        gap: 0.6rem;
+        margin-top: 2rem;
+      }
+
+      .contact-direct a {
+        width: fit-content;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.45);
+        color: var(--white);
+        font-size: 1.15rem;
+      }
+
+      .appointment-form {
+        padding: clamp(2rem, 5vw, 4rem);
+        color: var(--ink);
+        background: var(--white);
+        box-shadow: var(--shadow);
+      }
+
+      .form-intro {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        align-items: start;
+        margin-bottom: 2.5rem;
+      }
+
+      .form-intro h3 {
+        margin: 0;
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+        font-weight: 300;
+        letter-spacing: -0.035em;
+        line-height: 1.1;
+      }
+
+      .form-intro span {
+        color: var(--bronze-dark);
+        font-family: "Allura", cursive;
+        font-size: 2.2rem;
+        line-height: 1;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.4rem 1.2rem;
+      }
+
+      .field {
+        display: grid;
+        gap: 0.45rem;
+      }
+
+      .field-full {
+        grid-column: 1 / -1;
+      }
+
+      .field label {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        min-height: 3.4rem;
+        border: 0;
+        border-bottom: 1px solid rgba(34, 36, 32, 0.32);
+        border-radius: 0;
+        padding: 0.7rem 0;
+        color: var(--ink);
+        background: transparent;
+        outline: 0;
+        transition: border-color 0.2s ease;
+      }
+
+      .field textarea {
+        min-height: 7rem;
+        resize: vertical;
+      }
+
+      .field input:focus,
+      .field select:focus,
+      .field textarea:focus {
+        border-color: var(--bronze-dark);
+      }
+
+      .field input::placeholder,
+      .field textarea::placeholder {
+        color: #92938f;
+      }
+
+      .form-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .form-note {
+        max-width: 30rem;
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.74rem;
+        line-height: 1.55;
+      }
+
+      .hidden-field {
+        position: absolute;
+        left: -9999px;
+      }
+
+      .faq-grid {
+        display: grid;
+        grid-template-columns: minmax(17rem, 0.65fr) minmax(0, 1.35fr);
+        gap: clamp(3rem, 8vw, 7rem);
+      }
+
+      .faq-heading p {
+        margin: 1.4rem 0 0;
+        color: var(--ink-soft);
+      }
+
+      .faq-list {
+        border-top: 1px solid var(--line);
+      }
+
+      .faq-list details {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .faq-list summary {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding-block: 1.55rem;
+        list-style: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
+
+      .faq-list summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-list summary::after {
+        content: "+";
+        color: var(--bronze-dark);
+        font-size: 1.5rem;
+        font-weight: 300;
+      }
+
+      .faq-list details[open] summary::after {
+        content: "−";
+      }
+
+      .faq-answer {
+        max-width: 46rem;
+        padding: 0 3rem 1.6rem 0;
+        color: var(--ink-soft);
+      }
+
+      .faq-answer p {
+        margin: 0;
+      }
+
+      .site-footer {
+        color: rgba(255, 255, 255, 0.68);
+        background: #18201d;
+      }
+
+      .footer-main {
+        display: grid;
+        grid-template-columns: 1.2fr 0.75fr 0.75fr;
+        gap: 3rem;
+        padding-block: 4.5rem;
+      }
+
+      .footer-brand .brand {
+        color: var(--white);
+      }
+
+      .footer-brand .brand-place {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      .footer-brand p {
+        max-width: 28rem;
+        margin: 1.4rem 0 0;
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 0.87rem;
+      }
+
+      .footer-column h2 {
+        margin: 0 0 1rem;
+        color: var(--bronze-pale);
+        font-size: 0.67rem;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
+
+      .footer-column a,
+      .footer-column span {
+        width: fit-content;
+        display: block;
+        margin-top: 0.5rem;
+        font-size: 0.87rem;
+      }
+
+      .footer-column a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding-block: 1.4rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.7rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .mobile-actions {
+        position: fixed;
+        right: 0.8rem;
+        bottom: 0.8rem;
+        left: 0.8rem;
+        z-index: 55;
+        display: none;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 0.55rem;
+        padding: 0.5rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 253, 249, 0.94);
+        box-shadow: 0 14px 42px rgba(34, 36, 32, 0.18);
+        backdrop-filter: blur(16px);
+      }
+
+      .mobile-actions .button {
+        min-height: 3rem;
+      }
+
+      @keyframes copy-in {
+        from {
+          opacity: 0;
+          transform: translateY(1.2rem);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes image-in {
+        from {
+          opacity: 0;
+          transform: scale(1.025);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @media (max-width: 1080px) {
+        .header-inner {
+          grid-template-columns: 1fr auto auto;
+          gap: 1rem;
+        }
+
+        .site-nav ul {
+          gap: 1rem;
+        }
+
+        .site-nav li:nth-child(4),
+        .site-nav li:nth-child(5) {
+          display: none;
+        }
+
+        .service-item {
+          grid-template-columns: 2.5rem minmax(9rem, 0.55fr) minmax(13rem, 1fr);
+        }
+      }
+
+      @media (max-width: 880px) {
+        .container {
+          width: min(calc(100% - 2rem), var(--max));
+        }
+
+        .announcement-inner {
+          justify-content: center;
+        }
+
+        .announcement-address,
+        .header-cta {
+          display: none;
+        }
+
+        .header-inner {
+          grid-template-columns: 1fr auto;
+          min-height: 4.8rem;
+        }
+
+        .menu-button {
+          display: grid;
+        }
+
+        .site-nav {
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          z-index: 20;
+          height: calc(100svh - 4.8rem);
+          padding: 2rem 1rem 6rem;
+          overflow-y: auto;
+          visibility: hidden;
+          opacity: 0;
+          background: var(--paper);
+          transform: translateY(-0.8rem);
+          transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+        }
+
+        .site-nav.is-open {
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .site-nav ul {
+          display: grid;
+          gap: 0;
+        }
+
+        .site-nav li,
+        .site-nav li:nth-child(4),
+        .site-nav li:nth-child(5) {
+          display: block;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .site-nav a {
+          display: block;
+          padding: 1.25rem 0;
+          font-size: 1rem;
+        }
+
+        .hero {
+          min-height: 50rem;
+        }
+
+        .hero-media {
+          background-position: 56% bottom;
+        }
+
+        .hero::before {
+          background: linear-gradient(
+            180deg,
+            rgba(246, 243, 236, 1) 0%,
+            rgba(246, 243, 236, 0.99) 48%,
+            rgba(246, 243, 236, 0.72) 66%,
+            rgba(246, 243, 236, 0.08) 100%
+          );
+        }
+
+        .hero-inner {
+          align-items: flex-start;
+          padding-top: 4.5rem;
+        }
+
+        .hero-copy {
+          width: min(100%, 37rem);
+        }
+
+        .proof-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .proof-item:nth-child(3) {
+          border-top: 1px solid var(--line);
+        }
+
+        .proof-item:nth-child(4) {
+          border-top: 1px solid var(--line);
+          border-right: 1px solid var(--line);
+        }
+
+        .intro-grid,
+        .services-layout,
+        .philosophy-grid,
+        .about-grid,
+        .reviews-grid,
+        .visit-grid,
+        .contact-layout,
+        .faq-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .services-intro,
+        .contact-heading {
+          position: static;
+        }
+
+        .services-intro p {
+          max-width: 40rem;
+        }
+
+        .doctor-art {
+          min-height: 34rem;
+        }
+
+        .support-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .support-card + .support-card {
+          border-top: 1px solid var(--line);
+          border-left: 0;
+        }
+
+        .location-card {
+          width: min(100%, 38rem);
+        }
+
+        .footer-main {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .footer-brand {
+          grid-column: 1 / -1;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .brand-name {
+          font-size: 0.69rem;
+          letter-spacing: 0.1em;
+        }
+
+        .brand-place {
+          font-size: 0.62rem;
+        }
+
+        .hero {
+          min-height: 51rem;
+        }
+
+        .hero-media {
+          background-position: 52% bottom;
+          background-size: auto 57%;
+        }
+
+        .hero h1 {
+          max-width: 9ch;
+          font-size: clamp(3rem, 15vw, 4.5rem);
+        }
+
+        .script-line {
+          margin-left: 1.1rem;
+        }
+
+        .hero-lead {
+          max-width: 29rem;
+          font-size: 0.95rem;
+          line-height: 1.65;
+        }
+
+        .hero-actions .button {
+          width: 100%;
+        }
+
+        .hero-location {
+          align-items: flex-start;
+        }
+
+        .proof-item {
+          min-height: 6.3rem;
+          padding: 1rem;
+        }
+
+        .proof-item strong {
+          font-size: 0.9rem;
+        }
+
+        .proof-item span {
+          font-size: 0.62rem;
+        }
+
+        .section {
+          padding-block: 5rem;
+        }
+
+        .display-heading,
+        .services-intro h2,
+        .about-copy h2,
+        .reviews-heading h2,
+        .visit-copy h2,
+        .contact-heading h2,
+        .faq-heading h2 {
+          font-size: clamp(2.45rem, 12vw, 3.4rem);
+        }
+
+        .service-item {
+          grid-template-columns: 2.4rem 1fr;
+          gap: 0.8rem;
+        }
+
+        .service-item p {
+          grid-column: 2;
+        }
+
+        .philosophy-copy h2 {
+          font-size: clamp(2.6rem, 12vw, 3.6rem);
+        }
+
+        .doctor-art {
+          min-height: 29rem;
+        }
+
+        .doctor-caption {
+          right: 1.3rem;
+          bottom: 1.3rem;
+          left: 1.3rem;
+        }
+
+        .about-facts {
+          grid-template-columns: 1fr;
+        }
+
+        .about-fact,
+        .about-fact:first-child {
+          min-height: 5.5rem;
+          padding: 1rem 0;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .about-fact:last-child {
+          border-bottom: 0;
+        }
+
+        .support-card {
+          min-height: 26rem;
+        }
+
+        .review-item {
+          grid-template-columns: 2rem 1fr;
+          gap: 0.7rem;
+        }
+
+        .steps {
+          grid-template-columns: 1fr;
+        }
+
+        .step {
+          display: grid;
+          grid-template-columns: 2.6rem 1fr;
+          gap: 0 0.8rem;
+          padding: 1.2rem 0;
+          border-bottom: 1px solid var(--line);
+        }
+
+        .step-number {
+          grid-row: 1 / 3;
+          margin: 0;
+        }
+
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .field-full {
+          grid-column: auto;
+        }
+
+        .form-footer,
+        .footer-bottom {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .form-footer .button {
+          width: 100%;
+        }
+
+        .footer-main {
+          grid-template-columns: 1fr;
+          padding-bottom: 7.5rem;
+        }
+
+        .footer-brand {
+          grid-column: auto;
+        }
+
+        .mobile-actions {
+          display: grid;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Dentist",
+        "name": "Artistic General Dentistry",
+        "alternateName": "Artie B. Ricaud, DDS, CDT",
+        "url": "https://artiebricauddds.com/",
+        "telephone": "+1-770-461-3921",
+        "faxNumber": "+1-770-461-0944",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "455 Church Street",
+          "addressLocality": "Fayetteville",
+          "addressRegion": "GA",
+          "postalCode": "30214",
+          "addressCountry": "US"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday"],
+            "opens": "08:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Wednesday", "Thursday"],
+            "opens": "08:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "08:00",
+            "closes": "13:00"
+          }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Dental services",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Preventive and family dentistry" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cosmetic dentistry and veneers" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dental implants" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Restorative dentistry" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Root canal therapy" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Emergency dental services" } }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="announcement">
+      <div class="container announcement-inner">
+        <span>Need urgent dental help? <a href="tel:+17704613921">Call 770.461.3921</a></span>
+        <a
+          class="announcement-address"
+          href="https://www.google.com/maps/search/?api=1&amp;query=455+Church+Street+Fayetteville+GA+30214"
+          target="_blank"
+          rel="noreferrer"
+        >455 Church Street · Fayetteville, GA</a>
+      </div>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Artistic General Dentistry home">
+          <span class="brand-mark" aria-hidden="true">AGD</span>
+          <span class="brand-copy">
+            <span class="brand-name">Artistic General Dentistry</span>
+            <span class="brand-place">Fayetteville · Georgia</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">Dr. Ricaud</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#new-patients">New patients</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </nav>
+
+        <a class="button button-primary header-cta" href="#appointment">Request a visit</a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="kicker">Family · Cosmetic · Restorative</p>
+            <p class="script-line">Welcome</p>
+            <h1 id="hero-title">Precision dentistry.<span>Personal care.</span></h1>
+            <p class="hero-lead">
+              Thoughtful dentistry in Fayetteville, led by a dentist with an artist’s eye and a technician’s
+              understanding of how a smile should look, feel, and function.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#appointment">Request an appointment</a>
+              <a class="button button-outline" href="tel:+17704613921">Call 770.461.3921</a>
+            </div>
+            <a
+              class="hero-location"
+              href="https://www.google.com/maps/search/?api=1&amp;query=455+Church+Street+Fayetteville+GA+30214"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 21s7-5.28 7-12a7 7 0 1 0-14 0c0 6.72 7 12 7 12Z" stroke="currentColor" stroke-width="1.5" />
+                <circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5" />
+              </svg>
+              455 Church Street, Fayetteville, Georgia 30214
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="proof-bar" aria-label="Practice highlights">
+        <div class="container proof-grid">
+          <a
+            class="proof-item proof-rating"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Artistic+General+Dentistry+455+Church+Street+Fayetteville+GA+30214"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Read Artistic General Dentistry reviews on Google"
+          >
+            <strong>5.0 <span aria-hidden="true">★</span></strong>
+            <span>Google rating</span>
+          </a>
+          <div class="proof-item">
+            <strong>DDS + CDT</strong>
+            <span>Clinical and technical perspective</span>
+          </div>
+          <div class="proof-item">
+            <strong>24-hour support</strong>
+            <span>Emergency dental concerns</span>
+          </div>
+          <div class="proof-item">
+            <strong>Membership option</strong>
+            <span>For patients without insurance</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="intro-title">
+        <div class="container intro-grid">
+          <div>
+            <p class="section-label">A more considered dental experience</p>
+            <h2 class="display-heading" id="intro-title">Where craftsmanship and <em>care</em> meet.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>
+              Good dentistry is more than a procedure. It is listening closely, explaining clearly, and choosing
+              treatment that respects your health, comfort, priorities, and budget.
+            </p>
+            <p>That is the standard we bring to every appointment, from a routine cleaning to a complete smile restoration.</p>
+            <div class="signature" aria-hidden="true">Dr. Artie Ricaud</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-white" id="services" aria-labelledby="services-title">
+        <div class="container services-layout">
+          <div class="services-intro">
+            <p class="section-label">Care for every chapter</p>
+            <h2 id="services-title">One dental home. A complete range of care.</h2>
+            <p>
+              Prevent problems early, restore strength and comfort, or refine the details that help you smile with confidence.
+            </p>
+            <a class="button button-outline button-arrow" href="#appointment">Ask about treatment</a>
+          </div>
+
+          <div class="service-list">
+            <article class="service-item">
+              <span class="service-number" aria-hidden="true">01</span>
+              <h3>Preventive &amp; family dentistry</h3>
+              <p>Cleanings, comprehensive exams, digital X-rays, oral cancer screenings, mouthguards, and ongoing hygiene guidance.</p>
+            </article>
+            <article class="service-item">
+              <span class="service-number" aria-hidden="true">02</span>
+              <h3>Restorative dentistry</h3>
+              <p>Natural-looking fillings, crowns, bridges, partials, and dentures designed to restore everyday function.</p>
+            </article>
+            <article class="service-item">
+              <span class="service-number" aria-hidden="true">03</span>
+              <h3>Cosmetic dentistry</h3>
+              <p>Veneers and personalized aesthetic treatment planned with a dental ceramist’s attention to proportion, shape, and color.</p>
+            </article>
+            <article class="service-item">
+              <span class="service-number" aria-hidden="true">04</span>
+              <h3>Dental implants</h3>
+              <p>Implant placement and restoration planned together for a result that supports both long-term function and appearance.</p>
+            </article>
+            <article class="service-item">
+              <span class="service-number" aria-hidden="true">05</span>
+              <h3>Root canal therapy</h3>
+              <p>Focused treatment for infected or painful teeth, with clear guidance about what to expect before and after care.</p>
+            </article>
+            <article class="service-item">
+              <span class="service-number" aria-hidden="true">06</span>
+              <h3>Periodontal &amp; orthodontic care</h3>
+              <p>Individual treatment options to protect gum health, improve alignment, and support a stable, healthy smile.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section philosophy" aria-labelledby="philosophy-title">
+        <div class="container philosophy-grid">
+          <div class="philosophy-copy">
+            <p class="section-label">Our approach</p>
+            <h2 id="philosophy-title">You should understand your care <em>before</em> you commit to it.</h2>
+            <div class="principles">
+              <article class="principle">
+                <span>01</span>
+                <div>
+                  <h3>Clear options</h3>
+                  <p>We explain what we see, what can wait, and what deserves attention now.</p>
+                </div>
+              </article>
+              <article class="principle">
+                <span>02</span>
+                <div>
+                  <h3>Thoughtful treatment</h3>
+                  <p>Every recommendation balances health, durability, aesthetics, and your priorities.</p>
+                </div>
+              </article>
+              <article class="principle">
+                <span>03</span>
+                <div>
+                  <h3>Continuity of care</h3>
+                  <p>A long-term dental home means your care is built around a relationship, not a transaction.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <aside class="comfort-panel" aria-labelledby="comfort-title">
+            <p class="comfort-script">Comfort matters</p>
+            <h3 id="comfort-title">A calmer path to better dental health.</h3>
+            <p>Questions are welcome here. We make time for the conversation, especially when you feel nervous or unsure.</p>
+            <ul class="check-list">
+              <li>Unhurried explanations in plain language</li>
+              <li>Transparent conversations about treatment and cost</li>
+              <li>Support for urgent concerns after regular hours</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container about-grid">
+          <div class="doctor-art" role="img" aria-label="Artful monogram portrait treatment for Dr. Artie Ricaud">
+            <span class="doctor-monogram" aria-hidden="true">AR</span>
+            <div class="doctor-caption">
+              <div>
+                <strong>Artie B. Ricaud</strong>
+                <span>Doctor of Dental Surgery</span>
+              </div>
+              <div class="credential-seal">DDS<br>CDT</div>
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <p class="section-label">Meet Dr. Ricaud</p>
+            <h2 id="about-title">An uncommon path to truly artful dentistry.</h2>
+            <p class="large-copy">
+              Before becoming a dentist, Dr. Ricaud spent more than 15 years as a nationally certified dental ceramist.
+              That foundation still shapes the way he thinks about precision, function, and natural-looking results.
+            </p>
+            <p class="body-copy">
+              A Louisiana native, Dr. Ricaud earned a B.S. in Biology from Southeastern Louisiana University and his
+              Doctor of Dental Surgery from LSU School of Dentistry. He moved to Georgia in 2005 and has continued to
+              expand his expertise across restorative, cosmetic, implant, and endodontic dentistry.
+            </p>
+            <div class="about-facts" role="list" aria-label="Dr. Ricaud credentials">
+              <div class="about-fact" role="listitem">
+                <strong>15+</strong>
+                <span>Years as a dental ceramist</span>
+              </div>
+              <div class="about-fact" role="listitem">
+                <strong>DDS</strong>
+                <span>LSU School of Dentistry</span>
+              </div>
+              <div class="about-fact" role="listitem">
+                <strong>2005</strong>
+                <span>Georgia became home</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="support-band" aria-label="Financial and emergency support">
+        <div class="support-grid">
+          <article class="support-card">
+            <div>
+              <p class="section-label">Care without dental insurance</p>
+              <h2>Ask about the dental membership program.</h2>
+              <p>
+                The practice offers a membership option for individuals and families without dental insurance, with savings on routine visits and treatment.
+              </p>
+            </div>
+            <a class="button button-outline button-arrow" href="https://ourdentalmembership.com/" target="_blank" rel="noreferrer">Explore membership</a>
+          </article>
+          <article class="support-card emergency-card">
+            <div>
+              <p class="section-label">When something cannot wait</p>
+              <h2>Emergency dental support, day or night.</h2>
+              <p>Tooth pain, swelling, trauma, or a broken tooth deserves a clear next step. Call the office for guidance.</p>
+            </div>
+            <a class="button button-light" href="tel:+17704613921">Call 770.461.3921</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-white" id="reviews" aria-labelledby="reviews-title">
+        <div class="container reviews-grid">
+          <div class="reviews-heading">
+            <p class="section-label">Patient perspective</p>
+            <h2 id="reviews-title">Kindness is remembered.</h2>
+            <div class="rating">
+              <div class="rating-number">5.0</div>
+              <div class="rating-stars" role="img" aria-label="5 out of 5 stars on Google">★★★★★</div>
+              <p class="rating-label">Publicly listed Google rating</p>
+              <a
+                class="button button-outline button-arrow"
+                href="https://www.google.com/maps/search/?api=1&amp;query=Artistic+General+Dentistry+455+Church+Street+Fayetteville+GA+30214"
+                target="_blank"
+                rel="noreferrer"
+              >Read Google reviews</a>
+            </div>
+          </div>
+
+          <div class="review-list">
+            <article class="review-item">
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <div>
+                <blockquote>Wonderful dentist: thorough, sensitive and knowledgeable. Highly recommend.</blockquote>
+                <cite>Arlene · Google review</cite>
+              </div>
+            </article>
+            <article class="review-item">
+              <span class="quote-mark" aria-hidden="true">“</span>
+              <div>
+                <blockquote>The entire staff and the Doctor was absolutely fantastic and very friendly!</blockquote>
+                <cite>Andrea · Google review</cite>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="new-patients" aria-labelledby="visit-title">
+        <div class="container visit-grid">
+          <div class="visit-copy">
+            <p class="section-label">Your first visit</p>
+            <h2 id="visit-title">A simple start, with no guesswork.</h2>
+            <p>
+              Tell us what brings you in. We will help you understand what to bring, what to expect, and the right appointment for your needs.
+            </p>
+            <div class="steps">
+              <article class="step">
+                <span class="step-number" aria-hidden="true">01</span>
+                <h3>Reach out</h3>
+                <p>Call or send a short appointment request.</p>
+              </article>
+              <article class="step">
+                <span class="step-number" aria-hidden="true">02</span>
+                <h3>Meet the team</h3>
+                <p>Share your concerns and complete a thorough evaluation.</p>
+              </article>
+              <article class="step">
+                <span class="step-number" aria-hidden="true">03</span>
+                <h3>Know the plan</h3>
+                <p>Leave with clear options and an informed next step.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="location-card" id="location" aria-labelledby="location-title">
+            <p class="section-label">Visit the office</p>
+            <h3 id="location-title">In the heart of Fayetteville.</h3>
+            <p class="location-address">455 Church Street<br>Fayetteville, GA 30214</p>
+            <div class="hours" role="table" aria-label="Office hours">
+              <div class="hours-row" role="row"><strong role="rowheader">Monday–Tuesday</strong><span role="cell">8:00 am–7:00 pm</span></div>
+              <div class="hours-row" role="row"><strong role="rowheader">Wednesday–Thursday</strong><span role="cell">8:00 am–5:00 pm</span></div>
+              <div class="hours-row" role="row"><strong role="rowheader">Friday</strong><span role="cell">8:00 am–1:00 pm</span></div>
+              <div class="hours-row" role="row"><strong role="rowheader">Saturday–Sunday</strong><span role="cell">By appointment</span></div>
+            </div>
+            <a
+              class="button button-light button-arrow"
+              href="https://www.google.com/maps/search/?api=1&amp;query=455+Church+Street+Fayetteville+GA+30214"
+              target="_blank"
+              rel="noreferrer"
+            >Get directions</a>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="appointment" aria-labelledby="appointment-title">
+        <div class="container contact-layout">
+          <div class="contact-heading">
+            <p class="section-label">Let’s take the next step</p>
+            <h2 id="appointment-title">Ready when you are.</h2>
+            <p>Send a request and the office will follow up to find the right appointment time.</p>
+            <div class="contact-direct">
+              <a href="tel:+17704613921">770.461.3921</a>
+              <a href="fax:+17704610944">Fax 770.461.0944</a>
+            </div>
+          </div>
+
+          <form
+            class="appointment-form"
+            name="appointment-request"
+            method="post"
+            action="/thank-you.html"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="appointment-request">
+            <p class="hidden-field">
+              <label>Do not fill this out if you are human: <input name="bot-field" type="text"></label>
+            </p>
+            <div class="form-intro">
+              <h3>Request an appointment</h3>
+              <span aria-hidden="true">Hello</span>
+            </div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(770) 000-0000" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              </div>
+              <div class="field">
+                <label for="reason">Reason for visit</label>
+                <select id="reason" name="reason" required>
+                  <option value="">Choose one</option>
+                  <option>New patient exam</option>
+                  <option>Cleaning and preventive care</option>
+                  <option>Tooth pain or emergency</option>
+                  <option>Cosmetic consultation</option>
+                  <option>Dental implant consultation</option>
+                  <option>Other dental concern</option>
+                </select>
+              </div>
+              <div class="field field-full">
+                <label for="message">How can we help?</label>
+                <textarea id="message" name="message" placeholder="A short note about what you need"></textarea>
+              </div>
+            </div>
+            <div class="form-footer">
+              <p class="form-note">
+                Please do not include private medical or insurance information. This is a request, not a confirmed appointment. For urgent care, call the office.
+              </p>
+              <button class="button button-primary" type="submit">Send request</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section-white" aria-labelledby="faq-title">
+        <div class="container faq-grid">
+          <div class="faq-heading">
+            <p class="section-label">Helpful answers</p>
+            <h2 id="faq-title">A few things patients ask.</h2>
+            <p>Still unsure? Call the office and the team will help point you in the right direction.</p>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>Do you offer emergency dental care?</summary>
+              <div class="faq-answer"><p>Yes. The practice offers extended support for tooth pain and dental emergencies after regular hours and on weekends. Call 770.461.3921 for guidance.</p></div>
+            </details>
+            <details>
+              <summary>Is there an option for patients without dental insurance?</summary>
+              <div class="faq-answer"><p>Yes. The dental membership program is not insurance, but it is designed to help individuals and families without coverage save on routine visits and treatment.</p></div>
+            </details>
+            <details>
+              <summary>What services are available in the office?</summary>
+              <div class="faq-answer"><p>Services include preventive care, digital X-rays, oral cancer screening, periodontal care, restorative and cosmetic dentistry, implants, veneers, root canal therapy, and orthodontic treatment.</p></div>
+            </details>
+            <details>
+              <summary>Where is the practice located?</summary>
+              <div class="faq-answer"><p>The office is at 455 Church Street in Fayetteville, Georgia 30214. Use the directions link above for a route from your current location.</p></div>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Artistic General Dentistry, back to top">
+            <span class="brand-mark" aria-hidden="true">AGD</span>
+            <span class="brand-copy">
+              <span class="brand-name">Artistic General Dentistry</span>
+              <span class="brand-place">Fayetteville · Georgia</span>
+            </span>
+          </a>
+          <p>Precision-focused family, cosmetic, restorative, implant, and emergency dentistry with a warm, personal approach.</p>
+        </div>
+        <div class="footer-column">
+          <h2>Visit</h2>
+          <span>455 Church Street</span>
+          <span>Fayetteville, GA 30214</span>
+          <a href="tel:+17704613921">770.461.3921</a>
+        </div>
+        <div class="footer-column">
+          <h2>Explore</h2>
+          <a href="#services">Services</a>
+          <a href="#about">Meet Dr. Ricaud</a>
+          <a href="#new-patients">New patients</a>
+          <a href="#appointment">Request a visit</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© <span id="year">2026</span> Artistic General Dentistry</span>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <div class="mobile-actions" role="group" aria-label="Appointment actions">
+      <a class="button button-outline" href="tel:+17704613921">Call</a>
+      <a class="button button-primary" href="#appointment">Request visit</a>
+    </div>
+
+    <script>
+      const menuButton = document.querySelector(".menu-button");
+      const navigation = document.querySelector(".site-nav");
+
+      function closeMenu() {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+        navigation.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+      }
+
+      menuButton.addEventListener("click", () => {
+        const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+        menuButton.setAttribute("aria-expanded", String(!isOpen));
+        menuButton.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
+        navigation.classList.toggle("is-open", !isOpen);
+        document.body.classList.toggle("menu-open", !isOpen);
+      });
+
+      navigation.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
