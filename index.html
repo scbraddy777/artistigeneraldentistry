@@ -1179,8 +1179,45 @@
       }
 
       .emergency-card {
+        isolation: isolate;
         color: var(--white);
         background: #a96e3d;
+      }
+
+      .emergency-photo {
+        position: absolute;
+        inset: 0 0 0 auto;
+        z-index: 0;
+        width: 48%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: saturate(0.56) contrast(0.94) brightness(0.78);
+      }
+
+      .emergency-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          90deg,
+          #a96e3d 0%,
+          #a96e3d 46%,
+          rgba(169, 110, 61, 0.92) 56%,
+          rgba(169, 110, 61, 0.34) 82%,
+          rgba(169, 110, 61, 0.2) 100%
+        );
+        pointer-events: none;
+      }
+
+      .emergency-card > :not(.emergency-photo) {
+        position: relative;
+        z-index: 2;
+      }
+
+      .emergency-card > div {
+        width: min(62%, 34rem);
       }
 
       .emergency-card p {
@@ -1994,6 +2031,31 @@
           width: 100%;
         }
 
+        .emergency-card {
+          padding-top: 17rem;
+        }
+
+        .emergency-photo {
+          inset: 0 0 auto;
+          width: 100%;
+          height: 14rem;
+          object-position: center 52%;
+        }
+
+        .emergency-card::before {
+          background: linear-gradient(
+            180deg,
+            rgba(169, 110, 61, 0.1) 0,
+            rgba(169, 110, 61, 0.2) 48%,
+            rgba(169, 110, 61, 0.84) 78%,
+            #a96e3d 14rem
+          );
+        }
+
+        .emergency-card > div {
+          width: 100%;
+        }
+
         .review-item {
           grid-template-columns: 2rem 1fr;
           gap: 0.7rem;
@@ -2438,6 +2500,15 @@
             <a class="button button-outline button-arrow" href="https://ourdentalmembership.com/" target="_blank" rel="noreferrer">Explore membership</a>
           </article>
           <article class="support-card emergency-card">
+            <img
+              class="emergency-photo"
+              src="assets/emergency-dental.webp"
+              width="365"
+              height="365"
+              alt="A dentist reviewing a panoramic dental X-ray and indicating an area of concern."
+              loading="lazy"
+              decoding="async"
+            >
             <div>
               <p class="section-label">When something cannot wait</p>
               <h2>Emergency dental support, day or night.</h2>
