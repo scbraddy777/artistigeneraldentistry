@@ -994,18 +994,60 @@
 
       .prayer-card {
         position: relative;
-        padding: clamp(2.2rem, 5vw, 4rem);
         overflow: hidden;
         color: var(--ink);
         background: var(--paper);
         box-shadow: 0 32px 80px rgba(0, 0, 0, 0.22);
       }
 
-      .prayer-card::before {
+      .prayer-photo {
+        position: relative;
+        aspect-ratio: 4 / 3;
+        margin: 0;
+        overflow: hidden;
+        background: #d8c4ad;
+      }
+
+      .prayer-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 10%;
+        filter: saturate(0.82) contrast(0.96) brightness(0.96);
+      }
+
+      .prayer-photo::after {
         content: "";
         position: absolute;
         inset: 0;
-        opacity: 0.4;
+        background: linear-gradient(180deg, transparent 58%, rgba(24, 32, 29, 0.58));
+        pointer-events: none;
+      }
+
+      .prayer-photo figcaption {
+        position: absolute;
+        right: 1.4rem;
+        bottom: 1.2rem;
+        left: 1.4rem;
+        z-index: 1;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.63rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .prayer-content {
+        position: relative;
+        padding: clamp(2.2rem, 4vw, 3.5rem);
+        overflow: hidden;
+      }
+
+      .prayer-content::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        opacity: 0.36;
         background: repeating-linear-gradient(
           180deg,
           transparent 0,
@@ -1016,7 +1058,7 @@
         pointer-events: none;
       }
 
-      .prayer-card > * {
+      .prayer-content > * {
         position: relative;
         z-index: 1;
       }
@@ -1025,11 +1067,12 @@
         margin: 0 0 0.8rem;
         color: var(--bronze-dark);
         font-family: "Allura", cursive;
-        font-size: clamp(3.8rem, 7vw, 6rem);
+        font-size: clamp(3.6rem, 6vw, 5rem);
         line-height: 0.8;
+        white-space: nowrap;
       }
 
-      .prayer-card h3 {
+      .prayer-content h3 {
         max-width: 15ch;
         margin: 0;
         font-size: clamp(1.8rem, 3vw, 2.7rem);
@@ -1038,7 +1081,7 @@
         line-height: 1.08;
       }
 
-      .prayer-card > p:not(.prayer-script):not(.prayer-note) {
+      .prayer-content > p:not(.prayer-script):not(.prayer-note) {
         margin: 1.5rem 0 0;
         color: var(--ink-soft);
         line-height: 1.8;
@@ -1758,9 +1801,12 @@
           min-height: 0;
         }
 
-        .faith-copy,
-        .prayer-card {
+        .faith-copy {
           width: min(100%, 42rem);
+        }
+
+        .prayer-card {
+          width: min(100%, 34rem);
         }
 
         .support-grid {
@@ -1897,7 +1943,7 @@
           font-size: clamp(2.8rem, 13vw, 4rem);
         }
 
-        .prayer-card {
+        .prayer-content {
           padding: 2.2rem 1.6rem;
         }
 
@@ -2304,13 +2350,26 @@
           </div>
 
           <aside class="prayer-card" aria-labelledby="prayer-wall-title">
-            <p class="prayer-script">Prayer wall</p>
-            <h3 id="prayer-wall-title">A quiet place for what matters beyond the appointment.</h3>
-            <p>
-              Patients and families are welcome to leave a request on the prayer wall in our waiting room or take a
-              moment to pray for someone else. Every request is treated with care.
-            </p>
-            <p class="prayer-note">Prayer is offered, never required.</p>
+            <figure class="prayer-photo">
+              <img
+                src="assets/prayer-wall.jpg"
+                width="1200"
+                height="1599"
+                alt="The prayer wall in the Artistic General Dentistry waiting room, with handwritten prayer requests surrounding a wooden cross."
+                loading="lazy"
+                decoding="async"
+              >
+              <figcaption>In our waiting room</figcaption>
+            </figure>
+            <div class="prayer-content">
+              <p class="prayer-script">Prayer wall</p>
+              <h3 id="prayer-wall-title">A quiet place for what matters beyond the appointment.</h3>
+              <p>
+                Patients and families are welcome to leave a request on the prayer wall in our waiting room or take a
+                moment to pray for someone else. Every request is treated with care.
+              </p>
+              <p class="prayer-note">Prayer is offered, never required.</p>
+            </div>
           </aside>
         </div>
       </section>
